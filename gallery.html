@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | Lilo(C) & Stitch Official</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        /* =========================
+           BODY
+        ========================= */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+            color: #77765f;
+
+            background:
+                radial-gradient(
+                    circle at 10% 10%,
+                    rgba(225, 180, 188, 0.8),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 90% 20%,
+                    rgba(203, 213, 167, 0.85),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 20% 90%,
+                    rgba(239, 220, 224, 0.8),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 85% 85%,
+                    rgba(210, 220, 175, 0.7),
+                    transparent 30%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #eee9df,
+                    #ffffff,
+                    #e9edda
+                );
+
+            background-attachment: fixed;
+
+            overflow-x: hidden;
+        }
+
+    
+    /* =========================  
+       GLASS NAVIGATION  
+    ========================= */  
+
+    nav {  
+
+        width: 92%;  
+
+        max-width: 1200px;  
+
+        margin: 20px auto;  
+
+        padding: 20px;  
+
+        text-align: center;  
+
+        background:  
+            rgba(255, 255, 255, 0.10);  
+
+        border:  
+            2px solid  
+            rgba(255, 255, 255, 0.65);  
+
+        border-top-color:  
+            rgba(255, 255, 255, 0.95);  
+
+        border-left-color:  
+            rgba(255, 255, 255, 0.85);  
+
+        border-radius: 30px;  
+
+        backdrop-filter:  
+            blur(8px)  
+            saturate(140%);  
+
+        -webkit-backdrop-filter:  
+            blur(8px)  
+            saturate(140%);  
+
+        box-shadow:  
+
+            0 15px 40px  
+            rgba(70, 80, 50, 0.18),  
+
+            inset 0 1px 3px  
+            rgba(255, 255, 255, 0.95);  
+
+        position: sticky;  
+
+        top: 15px;  
+
+        z-index: 100;  
+    }  
+
+
+    nav a {  
+
+        color: white;  
+
+        text-decoration: none;  
+
+        font-family:  
+            Arial,  
+            Helvetica,  
+            sans-serif;  
+
+        font-size: 20px;  
+
+        font-weight: bold;  
+
+        margin: 0 20px;  
+
+        text-shadow:  
+            0 2px 5px  
+            rgba(70, 70, 50, 0.3);  
+
+        transition: 0.3s;  
+    }  
+
+
+    nav a:hover {  
+
+        color: #d59aa3;  
+
+        text-shadow:  
+            0 0 12px  
+            rgba(213, 154, 163, 0.8);  
+    }
+ 
+ /* =========================
+           LOGO GLASS AREA
+        ========================= */
+
+        .logo-container {
+
+            width: 90%;
+
+            max-width: 600px;
+
+            margin: 45px auto 25px;
+
+            padding: 30px;
+
+            text-align: center;
+
+            background:
+                rgba(255, 255, 255, 0.10);
+
+            border: 2px solid
+                rgba(255, 255, 255, 0.65);
+
+            border-top-color:
+                rgba(255, 255, 255, 0.95);
+
+            border-left-color:
+                rgba(255, 255, 255, 0.85);
+
+            border-radius: 30px;
+
+            backdrop-filter:
+                blur(10px)
+                saturate(140%);
+
+            -webkit-backdrop-filter:
+                blur(10px)
+                saturate(140%);
+
+            box-shadow:
+
+                0 20px 45px
+                rgba(70, 80, 50, 0.15),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.95);
+        }
+
+
+        .logo-container img {
+
+            width: 220px;
+
+            height: 220px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border:
+                5px solid
+                rgba(255, 255, 255, 0.9);
+
+            box-shadow:
+
+                0 8px 25px
+                rgba(70, 80, 50, 0.2),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.9);
+
+            background:
+                rgba(255, 248, 242, 0.5);
+
+            padding: 8px;
+        }
+
+
+        /* =========================
+           BUSINESS TITLE
+        ========================= */
+
+        .business-title {
+
+            width: 90%;
+
+            max-width: 800px;
+
+            margin: 25px auto;
+
+            padding: 25px;
+
+            text-align: center;
+
+            background:
+                rgba(255, 255, 255, 0.10);
+
+            border:
+                2px solid
+                rgba(255, 255, 255, 0.6);
+
+            border-radius: 28px;
+
+            backdrop-filter:
+                blur(8px);
+
+            -webkit-backdrop-filter:
+                blur(8px);
+
+            box-shadow:
+
+                0 15px 35px
+                rgba(70, 80, 50, 0.12),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.9);
+        }
+
+
+        .business-title h1 {
+
+            color: #a9a67a;
+
+            text-align: center;
+
+            font-size: 45px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-weight: bold;
+
+            line-height: 1.1;
+
+            margin: 0;
+        }
+
+
+
+
+        /* =========================
+           LOGO
+        ========================= */
+
+        .logo-container {
+            text-align: center;
+
+            margin-top: 35px;
+            margin-bottom: 20px;
+        }
+
+
+        .logo-container img {
+            width: 220px;
+            height: 220px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 5px solid
+                rgba(255, 255, 255, 0.9);
+
+            background:
+                rgba(255, 255, 255, 0.15);
+
+            padding: 8px;
+
+            box-shadow:
+                0 15px 35px
+                rgba(70, 80, 50, 0.18),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.9);
+        }
+
+
+        /* =========================
+           BUSINESS TITLE
+        ========================= */
+
+        .business-title {
+            color: #7f895a;
+
+            text-align: center;
+
+            font-size: 45px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-weight: bold;
+
+            line-height: 1.1;
+
+            margin-top: 10px;
+            margin-bottom: 5px;
+
+            text-shadow:
+                0 3px 12px
+                rgba(126, 137, 90, 0.2);
+        }
+
+
+        /* =========================
+           DIVIDER
+        ========================= */
+
+        .divider {
+            border: none;
+
+            border-top:
+                2px solid
+                rgba(169, 166, 122, 0.6);
+
+            margin: 40px 5% 30px;
+        }
+
+
+        /* =========================
+           GALLERY SECTION
+        ========================= */
+
+        .gallery-section {
+            width: 94%;
+            max-width: 1200px;
+
+            margin: 40px auto;
+
+            padding: 35px;
+
+            background:
+                rgba(255, 255, 255, 0.10);
+
+            border:
+                2px solid
+                rgba(255, 255, 255, 0.65);
+
+            border-top-color:
+                rgba(255, 255, 255, 0.95);
+
+            border-left-color:
+                rgba(255, 255, 255, 0.85);
+
+            border-radius: 30px;
+
+            backdrop-filter:
+                blur(10px)
+                saturate(140%);
+
+            -webkit-backdrop-filter:
+                blur(10px)
+                saturate(140%);
+
+            box-shadow:
+                0 20px 45px
+                rgba(70, 80, 50, 0.16),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.9);
+        }
+
+
+        .gallery-section > h1 {
+            text-align: center;
+
+            color: #c9939b;
+
+            font-family:
+                "Cooper Black",
+                "Trebuchet MS",
+                Georgia,
+                serif;
+
+            font-size: 32px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .gallery-intro {
+            text-align: center;
+
+            color: #77765f;
+
+            font-size: 17px;
+
+            margin-bottom: 35px;
+        }
+
+
+        /* =========================
+           GALLERY GRID
+           4 COLUMNS ON DESKTOP
+        ========================= */
+
+        .gallery-container {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+            gap: 20px;
+
+            width: 100%;
+        }
+
+
+        /* =========================
+           GALLERY CARD
+        ========================= */
+
+        .gallery-card {
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                rgba(255, 255, 255, 0.55);
+
+            border:
+                2px solid
+                rgba(255, 255, 255, 0.75);
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 8px 20px
+                rgba(70, 80, 50, 0.12),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.9);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+
+            display: flex;
+
+            flex-direction: column;
+
+            min-width: 0;
+        }
+
+
+        .gallery-card:hover {
+            transform:
+                translateY(-5px);
+
+            box-shadow:
+                0 15px 30px
+                rgba(70, 80, 50, 0.18);
+        }
+
+
+        /* =========================
+           SQUARE GALLERY IMAGE
+        ========================= */
+
+        .gallery-card img {
+            width: 100%;
+
+            aspect-ratio: 1 / 1;
+
+            height: auto;
+
+            object-fit: cover;
+
+            display: block;
+
+            border-radius:
+                17px 17px 0 0;
+
+            transition:
+                transform 0.4s ease;
+        }
+
+
+        .gallery-card:hover img {
+            transform:
+                scale(1.04);
+        }
+
+
+        /* =========================
+           GALLERY DESCRIPTION
+        ========================= */
+
+        .gallery-info {
+            padding:
+                18px 12px 22px;
+
+            text-align: center;
+
+            background:
+                rgba(255, 255, 255, 0.65);
+
+            border-top:
+                1px solid
+                rgba(255, 255, 255, 0.7);
+
+            min-height: 145px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+
+        .gallery-info h2 {
+            color: #c9939b;
+
+            font-family:
+                "Cooper Black",
+                "Trebuchet MS",
+                Georgia,
+                serif;
+
+            font-size: 18px;
+
+            line-height: 1.25;
+
+            margin-bottom: 10px;
+
+            max-width: 95%;
+        }
+
+
+        .gallery-info p {
+            color: #77765f;
+
+            font-family:
+                "Trebuchet MS",
+                Arial,
+                sans-serif;
+
+            font-size: 13px;
+
+            line-height: 1.45;
+
+            max-width: 95%;
+        }
+
+
+        /* =========================
+           VIDEO SECTION
+        ========================= */
+
+        .video-section {
+            width: 94%;
+            max-width: 1200px;
+
+            margin: 50px auto;
+
+            padding: 35px;
+
+            text-align: center;
+
+            background:
+                rgba(255, 255, 255, 0.10);
+
+            border:
+                2px solid
+                rgba(255, 255, 255, 0.65);
+
+            border-top-color:
+                rgba(255, 255, 255, 0.95);
+
+            border-left-color:
+                rgba(255, 255, 255, 0.85);
+
+            border-radius: 30px;
+
+            backdrop-filter:
+                blur(10px)
+                saturate(140%);
+
+            -webkit-backdrop-filter:
+                blur(10px)
+                saturate(140%);
+
+            box-shadow:
+                0 20px 45px
+                rgba(70, 80, 50, 0.16),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.9);
+        }
+
+
+        .video-section h1 {
+            color: #c9939b;
+
+            font-family:
+                "Cooper Black",
+                "Trebuchet MS",
+                Georgia,
+                serif;
+
+            font-size: 30px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .video-container {
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 15px;
+        }
+
+
+        video {
+            width: 100%;
+
+            max-width: 700px;
+
+            height: auto;
+
+            border-radius: 25px;
+
+            border:
+                3px solid
+                rgba(255, 255, 255, 0.75);
+
+            box-shadow:
+                0 15px 35px
+                rgba(70, 80, 50, 0.20);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            width: 92%;
+            max-width: 1200px;
+
+            margin: 60px auto 20px;
+
+            padding: 30px;
+
+            background:
+                rgba(255, 255, 255, 0.10);
+
+            border:
+                2px solid
+                rgba(255, 255, 255, 0.65);
+
+            border-top-color:
+                rgba(255, 255, 255, 0.95);
+
+            border-left-color:
+                rgba(255, 255, 255, 0.85);
+
+            border-radius: 28px;
+
+            backdrop-filter:
+                blur(10px);
+
+            -webkit-backdrop-filter:
+                blur(10px);
+
+            box-shadow:
+                0 15px 40px
+                rgba(70, 80, 50, 0.16),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.9);
+
+            text-align: center;
+        }
+
+
+        .copyright {
+            color: #a29b88;
+
+            font-size: 14px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .footer-title {
+            color: #c9939b;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            margin-bottom: 20px;
+        }
+
+
+        .social-links {
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .social-link {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 55px;
+            height: 55px;
+
+            padding: 7px;
+
+            background:
+                rgba(255, 255, 255, 0.25);
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.75);
+
+            border-radius: 50%;
+
+            backdrop-filter:
+                blur(5px);
+
+            -webkit-backdrop-filter:
+                blur(5px);
+
+            box-shadow:
+                0 5px 15px
+                rgba(70, 80, 50, 0.12);
+
+            transition: 0.3s;
+        }
+
+
+        .social-link:hover {
+            transform:
+                translateY(-4px)
+                scale(1.05);
+
+            background:
+                rgba(255, 255, 255, 0.45);
+        }
+
+
+        .social-link img {
+            width: 40px;
+            height: 40px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+        }
+
+
+        /* =========================
+           MOBILE
+           2 COLUMNS
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            nav {
+                width: 94%;
+
+                padding: 15px 8px;
+
+                border-radius: 25px;
+            }
+
+
+            nav a {
+                font-size: 14px;
+
+                margin: 0 6px;
+            }
+
+
+            .logo-container img {
+                width: 170px;
+                height: 170px;
+            }
+
+
+            .business-title {
+                font-size: 34px;
+            }
+
+
+            .gallery-section {
+                width: 94%;
+
+                padding: 18px;
+
+                border-radius: 23px;
+            }
+
+
+            .gallery-section > h1 {
+                font-size: 25px;
+
+                line-height: 1.2;
+            }
+
+
+            .gallery-intro {
+                font-size: 14px;
+
+                margin-bottom: 25px;
+            }
+
+
+            /* =========================
+               2 CARDS PER ROW
+            ========================= */
+
+            .gallery-container {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+
+                gap: 12px;
+            }
+
+
+            /* =========================
+               MOBILE CARD
+            ========================= */
+
+            .gallery-card {
+                border-radius: 16px;
+
+                border-width: 1px;
+            }
+
+
+            /* =========================
+               SQUARE MOBILE IMAGE
+            ========================= */
+
+            .gallery-card img {
+                aspect-ratio: 1 / 1;
+
+                height: auto;
+
+                border-radius:
+                    14px 14px 0 0;
+            }
+
+
+            /* =========================
+               MOBILE DESCRIPTION
+            ========================= */
+
+            .gallery-info {
+                min-height: 125px;
+
+                padding:
+                    12px 8px 15px;
+            }
+
+
+            .gallery-info h2 {
+                font-size: 14px;
+
+                line-height: 1.2;
+
+                margin-bottom: 7px;
+            }
+
+
+            .gallery-info p {
+                font-size: 10px;
+
+                line-height: 1.35;
+            }
+
+
+            /* =========================
+               VIDEO
+            ========================= */
+
+            .video-section {
+                width: 94%;
+
+                padding: 20px;
+
+                border-radius: 23px;
+            }
+
+
+            .video-section h1 {
+                font-size: 25px;
+            }
+
+
+            video {
+                border-radius: 18px;
+            }
+
+
+            /* =========================
+               FOOTER
+            ========================= */
+
+            footer {
+                width: 94%;
+
+                padding: 25px 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="product.html">Products</a>
+
+        <a href="gallery.html">Gallery</a>
+        
+        <a href="contact.html">Contact</a>
+
+        <a href="about.html">About Us</a>
+
+           </nav>
+
+
+    <!-- =========================
+         LOGO
+    ========================= -->
+
+    <div class="logo-container">
+
+        <img
+            src="My business logo.png"
+            alt="Lilo(C) & Stitch Studio Logo">
+
+    </div>
+
+
+    <!-- =========================
+         BUSINESS TITLE
+    ========================= -->
+
+    <h1 class="business-title">
+
+        Lilo(C) &amp; Stitch <br>
+        Studio
+
+    </h1>
+
+
+    <hr class="divider">
+
+
+    <!-- =========================
+         GALLERY
+    ========================= -->
+
+    <section class="gallery-section">
+
+        <h1>
+            Our Handmade Collection
+        </h1>
+
+        <p class="gallery-intro">
+            A collection created one stitch at a time.
+        </p>
+
+
+        <div class="gallery-container">
+
+
+            <!-- =====================
+                 GALLERY 1
+            ====================== -->
+
+            <div class="gallery-card">
+
+                <img
+                    src="Pictures/gallery1.jpg"
+                    alt="Crochet yarn and materials">
+
+                <div class="gallery-info">
+
+                    <h2>
+                        Where Every Stitch Begins
+                    </h2>
+
+                    <p>
+                        Our colorful yarns and crochet materials.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================
+                 GALLERY 2
+            ====================== -->
+
+            <div class="gallery-card">
+
+                <img
+                    src="Pictures/gallery2.jpg"
+                    alt="Crochet keychains">
+
+                <div class="gallery-info">
+
+                    <h2>
+                        Made With Care
+                    </h2>
+
+                    <p>
+                        A handmade crochet piece crafted with love.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================
+                 GALLERY 3
+            ====================== -->
+
+            <div class="gallery-card">
+
+                <img
+                    src="Pictures/gallery 3.jpg"
+                    alt="Handmade crochet wallets">
+
+                <div class="gallery-info">
+
+                    <h2>
+                        Loops &amp; Lock
+                    </h2>
+
+                    <p>
+                        Handmade wallets with a cozy charm.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================
+                 GALLERY 4
+            ====================== -->
+
+            <div class="gallery-card">
+
+                <img
+                    src="Pictures/gallery4.jpg"
+                    alt="Crochet accessories">
+
+                <div class="gallery-info">
+
+                    <h2>
+                        Little Loop
+                    </h2>
+
+                    <p>
+                        Cute crochet accessories for everyday use.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================
+                 GALLERY 5
+            ====================== -->
+
+            <div class="gallery-card">
+
+                <img
+                    src="Pictures/gallery7.jpg"
+                    alt="Crochet fashion">
+
+                <div class="gallery-info">
+
+                    <h2>
+                        Stitch &amp; Wear
+                    </h2>
+
+                    <p>
+    Comfortable handmade crochet fashion.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- =====================
+     GALLERY 6
+====================== -->
+
+<div class="gallery-card">
+
+    <img
+        src="Pictures/gallery8.jpg"
+        alt="Handmade crochet bag">
+
+    <div class="gallery-info">
+
+        <h2>
+            Sunbeam Carryall
+        </h2>
+
+        <p>
+            A handmade bag for your everyday essentials.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- =====================
+     GALLERY 7
+====================== -->
+
+<div class="gallery-card">
+
+    <img
+        src="Pictures/gallery6.jpg"
+        alt="Crochet footwear accessories">
+
+    <div class="gallery-info">
+
+        <h2>
+            Loop &amp; Step
+        </h2>
+
+        <p>
+            Colorful handmade details for your footwear.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- =====================
+     GALLERY 8
+====================== -->
+
+<div class="gallery-card">
+
+    <img
+        src="Pictures/gallery5.jpg"
+        alt="Pink crochet baskets">
+
+    <div class="gallery-info">
+
+        <h2>
+            Our Handmade Collection
+        </h2>
+
+        <p>
+            A collection created one stitch at a time.
+        </p>
+
+    </div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     VIDEO SECTION
+========================= -->
+
+<section class="video-section">
+
+    <h1>
+        Watch Our Crochet Story
+    </h1>
+
+    <div class="video-container">
+
+        <video controls>
+
+            <source
+                src="videos/Commercial Video.mp4"
+                type="video/mp4">
+
+            <source
+                src="movie.webm"
+                type="video/webm">
+
+            Your browser does not support the video tag.
+
+        </video>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="glass-footer">
+
+    <p class="copyright">
+        &copy; 2026 Lilo(C) &amp; Stitch Official
+    </p>
+
+    <h3 class="footer-title">
+        Follow Us:
+    </h3>
+
+    <div class="social-links">
+
+        <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            class="social-link">
+
+            <img
+                src="images/Facebook.jpg"
+                alt="Facebook">
+
+        </a>
+
+
+        <a
+            href="mailto:lilocalraluz8@gmail.com"
+            class="social-link">
+
+            <img
+                src="images/Gmail.jpg"
+                alt="Gmail">
+
+        </a>
+
+
+        <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            class="social-link">
+
+            <img
+                src="images/Instagram.jpg"
+                alt="Instagram">
+
+        </a>
+
+
+        <a
+            href="https://www.tiktok.com/"
+            target="_blank"
+            class="social-link">
+
+            <img
+                src="images/Tiktok.jpg"
+                alt="TikTok">
+
+        </a>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
+   

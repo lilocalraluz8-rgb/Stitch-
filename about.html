@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | Lilo(C) & Stitch Studios</title>
+
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        /* =========================
+           BODY
+        ========================= */
+
+        body {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            min-height: 100vh;
+
+            color: #77765f;
+
+            background:
+
+                radial-gradient(
+                    circle at 10% 10%,
+                    rgba(225, 180, 188, 0.8),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 90% 20%,
+                    rgba(203, 213, 167, 0.85),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 20% 90%,
+                    rgba(239, 220, 224, 0.8),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 85% 85%,
+                    rgba(210, 220, 175, 0.7),
+                    transparent 30%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #eee9df,
+                    #ffffff,
+                    #e9edda
+                );
+
+            background-attachment: fixed;
+
+            overflow-x: hidden;
+        }
+
+
+        /* =========================
+           GLASS NAVIGATION
+        ========================= */
+
+        nav {
+
+            width: 92%;
+
+            max-width: 1200px;
+
+            margin: 20px auto;
+
+            padding: 20px;
+
+            text-align: center;
+
+            background:
+                rgba(255, 255, 255, 0.10);
+
+            border:
+                2px solid
+                rgba(255, 255, 255, 0.65);
+
+            border-top-color:
+                rgba(255, 255, 255, 0.95);
+
+            border-left-color:
+                rgba(255, 255, 255, 0.85);
+
+            border-radius: 30px;
+
+            backdrop-filter:
+                blur(8px)
+                saturate(140%);
+
+            -webkit-backdrop-filter:
+                blur(8px)
+                saturate(140%);
+
+            box-shadow:
+
+                0 15px 40px
+                rgba(70, 80, 50, 0.18),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.95);
+
+            position: sticky;
+
+            top: 15px;
+
+            z-index: 100;
+        }
+
+
+        nav a {
+
+            color: white;
+
+            text-decoration: none;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 20px;
+
+            font-weight: bold;
+
+            margin: 0 20px;
+
+            text-shadow:
+                0 2px 5px
+                rgba(70, 70, 50, 0.3);
+
+            transition: 0.3s;
+        }
+
+
+        nav a:hover {
+
+            color: #d59aa3;
+
+            text-shadow:
+                0 0 12px
+                rgba(213, 154, 163, 0.8);
+        }
+
+ /* =========================
+           LOGO GLASS AREA
+        ========================= */
+
+        .logo-container {
+
+            width: 90%;
+
+            max-width: 600px;
+
+            margin: 45px auto 25px;
+
+            padding: 30px;
+
+            text-align: center;
+
+            background:
+                rgba(255, 255, 255, 0.10);
+
+            border: 2px solid
+                rgba(255, 255, 255, 0.65);
+
+            border-top-color:
+                rgba(255, 255, 255, 0.95);
+
+            border-left-color:
+                rgba(255, 255, 255, 0.85);
+
+            border-radius: 30px;
+
+            backdrop-filter:
+                blur(10px)
+                saturate(140%);
+
+            -webkit-backdrop-filter:
+                blur(10px)
+                saturate(140%);
+
+            box-shadow:
+
+                0 20px 45px
+                rgba(70, 80, 50, 0.15),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.95);
+        }
+
+
+        .logo-container img {
+
+            width: 220px;
+
+            height: 220px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border:
+                5px solid
+                rgba(255, 255, 255, 0.9);
+
+            box-shadow:
+
+                0 8px 25px
+                rgba(70, 80, 50, 0.2),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.9);
+
+            background:
+                rgba(255, 248, 242, 0.5);
+
+            padding: 8px;
+        }
+
+
+        /* =========================
+           BUSINESS TITLE
+        ========================= */
+
+        .business-title {
+
+            width: 90%;
+
+            max-width: 800px;
+
+            margin: 25px auto;
+
+            padding: 25px;
+
+            text-align: center;
+
+            background:
+                rgba(255, 255, 255, 0.10);
+
+            border:
+                2px solid
+                rgba(255, 255, 255, 0.6);
+
+            border-radius: 28px;
+
+            backdrop-filter:
+                blur(8px);
+
+            -webkit-backdrop-filter:
+                blur(8px);
+
+            box-shadow:
+
+                0 15px 35px
+                rgba(70, 80, 50, 0.12),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.9);
+        }
+
+
+        .business-title h1 {
+
+            color: #a9a67a;
+
+            text-align: center;
+
+            font-size: 45px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-weight: bold;
+
+            line-height: 1.1;
+
+            margin: 0;
+        }
+
+
+        /* =========================
+           LOGO
+        ========================= */
+
+        .logo-container {
+
+            text-align: center;
+
+            margin-top: 35px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .logo-container img {
+
+            width: 220px;
+
+            height: 220px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border:
+                5px solid
+                rgba(255, 255, 255, 0.9);
+
+            background:
+                rgba(255, 255, 255, 0.15);
+
+            padding: 8px;
+
+            box-shadow:
+
+                0 15px 35px
+                rgba(70, 80, 50, 0.18),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.9);
+        }
+
+
+        /* =========================
+           BUSINESS TITLE
+        ========================= */
+
+        .business-title {
+
+            color: #7f895a;
+
+            text-align: center;
+
+            font-size: 45px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-weight: bold;
+
+            line-height: 1.1;
+
+            margin-top: 10px;
+
+            margin-bottom: 5px;
+
+            text-shadow:
+                0 3px 12px
+                rgba(126, 137, 90, 0.2);
+        }
+
+
+        /* =========================
+           DIVIDER
+        ========================= */
+
+        .divider {
+
+            border: none;
+
+            border-top:
+                2px solid
+                rgba(169, 166, 122, 0.6);
+
+            margin:
+                40px 5% 30px;
+        }
+
+
+        /* =========================
+           MAIN ABOUT GLASS BOX
+           SAME STRUCTURE AS GALLERY
+        ========================= */
+
+        .about-container {
+
+            width: 94%;
+
+            max-width: 1200px;
+
+            margin: 40px auto;
+
+            padding: 35px;
+
+            background:
+                rgba(255, 255, 255, 0.10);
+
+            border:
+                2px solid
+                rgba(255, 255, 255, 0.65);
+
+            border-top-color:
+                rgba(255, 255, 255, 0.95);
+
+            border-left-color:
+                rgba(255, 255, 255, 0.85);
+
+            border-radius: 30px;
+
+            backdrop-filter:
+                blur(10px)
+                saturate(140%);
+
+            -webkit-backdrop-filter:
+                blur(10px)
+                saturate(140%);
+
+            box-shadow:
+
+                0 20px 45px
+                rgba(70, 80, 50, 0.16),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.9);
+        }
+
+
+        /* =========================
+           ABOUT TITLE
+        ========================= */
+
+        .about-title {
+
+            text-align: center;
+
+            margin-bottom: 30px;
+        }
+
+
+        .about-title h1 {
+
+            color: #c9939b;
+
+            font-family:
+                "Cooper Black",
+                "Trebuchet MS",
+                Georgia,
+                serif;
+
+            font-size: 32px;
+
+            line-height: 1.2;
+
+            margin-bottom: 10px;
+
+            text-shadow:
+                0 3px 12px
+                rgba(201, 147, 155, 0.2);
+        }
+
+
+        .about-title p {
+
+            color: #77765f;
+
+            font-family:
+                "Trebuchet MS",
+                Arial,
+                sans-serif;
+
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           ABOUT GLASS CARDS
+        ========================= */
+
+        .about-section {
+
+            position: relative;
+
+            overflow: hidden;
+
+            width: 100%;
+
+            margin-bottom: 20px;
+
+            padding: 30px;
+
+            background:
+                rgba(255, 255, 255, 0.13);
+
+            border:
+                2px solid
+                rgba(255, 255, 255, 0.65);
+
+            border-top-color:
+                rgba(255, 255, 255, 0.95);
+
+            border-left-color:
+                rgba(255, 255, 255, 0.85);
+
+            border-radius: 22px;
+
+            backdrop-filter:
+                blur(8px)
+                saturate(140%);
+
+            -webkit-backdrop-filter:
+                blur(8px)
+                saturate(140%);
+
+            box-shadow:
+
+                0 10px 25px
+                rgba(70, 80, 50, 0.12),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.9);
+
+            transition:
+                transform 0.35s ease,
+                box-shadow 0.35s ease;
+        }
+
+
+        /* =========================
+           GLASS SHINE
+        ========================= */
+
+        .about-section::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+
+            left: -100%;
+
+            width: 45%;
+
+            height: 100%;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.25),
+                    transparent
+                );
+
+            transform:
+                skewX(-20deg);
+
+            transition:
+                left 0.7s ease;
+
+            pointer-events: none;
+        }
+
+
+        .about-section:hover::before {
+
+            left: 150%;
+        }
+
+
+        /* =========================
+           GLASS TOP HIGHLIGHT
+        ========================= */
+
+        .about-section::after {
+
+            content: "";
+
+            position: absolute;
+
+            top: 1px;
+
+            left: 8%;
+
+            width: 84%;
+
+            height: 1px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.95),
+                    transparent
+                );
+
+            pointer-events: none;
+        }
+
+
+        /* =========================
+           HOVER
+        ========================= */
+
+        .about-section:hover {
+
+            transform:
+                translateY(-5px);
+
+            box-shadow:
+
+                0 18px 35px
+                rgba(70, 80, 50, 0.18),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.95);
+        }
+
+
+        /* =========================
+           SECTION HEADINGS
+        ========================= */
+
+        .about-section h2 {
+
+            color: #c9939b;
+
+            font-family:
+                "Cooper Black",
+                "Trebuchet MS",
+                Georgia,
+                serif;
+
+            font-size: 25px;
+
+            line-height: 1.25;
+
+            margin-bottom: 15px;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        /* =========================
+           SECTION TEXT
+        ========================= */
+
+        .about-section p {
+
+            color: #77765f;
+
+            font-family:
+                "Trebuchet MS",
+                Arial,
+                sans-serif;
+
+            font-size: 15px;
+
+            line-height: 1.7;
+
+            text-align: justify;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        /* =========================
+           GOALS
+        ========================= */
+
+        .goals {
+
+            padding-left: 25px;
+
+            font-family:
+                "Trebuchet MS",
+                Arial,
+                sans-serif;
+
+            color: #77765f;
+
+            line-height: 1.8;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        .goals li {
+
+            font-size: 15px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .goals li::marker {
+
+            color: #d3a0a7;
+        }
+
+
+        /* =========================
+           TEAM
+        ========================= */
+
+        .team {
+
+            text-align: center;
+        }
+
+
+        .team-name {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif !important;
+
+            font-size: 19px !important;
+
+            font-weight: bold;
+
+            color: #c9939b !important;
+
+            margin-bottom: 5px;
+        }
+
+
+        .team-role {
+
+            font-family:
+                "Trebuchet MS",
+                Arial,
+                sans-serif !important;
+
+            font-size: 15px !important;
+
+            color: #77765f !important;
+
+            text-align: center !important;
+        }
+
+      /* =========================
+   GLASS FOOTER
+========================= */
+
+.glass-footer {
+    width: 88%;
+    max-width: 1000px;
+    margin: 80px auto 30px;
+    padding: 45px 20px 50px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 210, 220, 0.38),
+        rgba(255, 255, 255, 0.32),
+        rgba(220, 245, 190, 0.35)
+    );
+
+    border: 2px solid rgba(255, 255, 255, 0.65);
+    border-radius: 35px;
+
+    box-shadow:
+        0 8px 30px rgba(120, 100, 100, 0.12),
+        inset 0 1px 2px rgba(255, 255, 255, 0.8);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+
+/* COPYRIGHT */
+
+.copyright {
+    margin: 0 0 32px;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    color: #999999;
+}
+
+
+/* FOLLOW US */
+
+.footer-title {
+    margin: 0 0 28px;
+
+    font-size: 26px;
+    font-weight: 700;
+
+    color: #c58d9c;
+}
+
+
+/* SOCIAL ICONS */
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+}
+
+
+/* CIRCULAR ICON BOX */
+
+.social-link {
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 8px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    border: 2px solid rgba(255, 255, 255, 0.75);
+
+    box-shadow:
+        0 5px 15px rgba(120, 100, 100, 0.12),
+        inset 0 1px 4px rgba(255, 255, 255, 0.8);
+
+    transition: all 0.3s ease;
+}
+
+
+/* IMAGE INSIDE CIRCLE */
+
+.social-link img {
+    width: 42px;
+    height: 42px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    display: block;
+}
+
+
+/* HOVER */
+
+.social-link:hover {
+    transform: translateY(-6px) scale(1.05);
+
+    box-shadow:
+        0 10px 20px rgba(120, 100, 100, 0.18),
+        inset 0 1px 5px rgba(255, 255, 255, 0.9);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .glass-footer {
+        width: 82%;
+        margin: 70px auto 25px;
+        padding: 38px 20px 42px;
+        border-radius: 32px;
+    }
+
+    .copyright {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .footer-title {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .social-links {
+        gap: 18px;
+    }
+
+    .social-link {
+        width: 58px;
+        height: 58px;
+        padding: 7px;
+    }
+
+    .social-link img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+       /* =========================
+   GLASS FOOTER
+========================= */
+
+.glass-footer {
+    width: 88%;
+    max-width: 1000px;
+    margin: 80px auto 30px;
+    padding: 45px 20px 50px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 210, 220, 0.38),
+        rgba(255, 255, 255, 0.32),
+        rgba(220, 245, 190, 0.35)
+    );
+
+    border: 2px solid rgba(255, 255, 255, 0.65);
+    border-radius: 35px;
+
+    box-shadow:
+        0 8px 30px rgba(120, 100, 100, 0.12),
+        inset 0 1px 2px rgba(255, 255, 255, 0.8);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+
+/* COPYRIGHT */
+
+.copyright {
+    margin: 0 0 32px;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    color: #999999;
+}
+
+
+/* FOLLOW US */
+
+.footer-title {
+    margin: 0 0 28px;
+
+    font-size: 26px;
+    font-weight: 700;
+
+    color: #c58d9c;
+}
+
+
+/* SOCIAL ICONS */
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+}
+
+
+/* CIRCULAR ICON BOX */
+
+.social-link {
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 8px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    border: 2px solid rgba(255, 255, 255, 0.75);
+
+    box-shadow:
+        0 5px 15px rgba(120, 100, 100, 0.12),
+        inset 0 1px 4px rgba(255, 255, 255, 0.8);
+
+    transition: all 0.3s ease;
+}
+
+
+/* IMAGE INSIDE CIRCLE */
+
+.social-link img {
+    width: 42px;
+    height: 42px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    display: block;
+}
+
+
+/* HOVER */
+
+.social-link:hover {
+    transform: translateY(-6px) scale(1.05);
+
+    box-shadow:
+        0 10px 20px rgba(120, 100, 100, 0.18),
+        inset 0 1px 5px rgba(255, 255, 255, 0.9);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .glass-footer {
+        width: 82%;
+        margin: 70px auto 25px;
+        padding: 38px 20px 42px;
+        border-radius: 32px;
+    }
+
+    .copyright {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .footer-title {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .social-links {
+        gap: 18px;
+    }
+
+    .social-link {
+        width: 58px;
+        height: 58px;
+        padding: 7px;
+    }
+
+    .social-link img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+
+            /* NAVIGATION */
+
+            nav {
+
+                width: 94%;
+
+                padding: 15px 8px;
+
+                border-radius: 25px;
+            }
+
+
+            nav a {
+
+                font-size: 14px;
+
+                margin: 0 6px;
+            }
+
+
+            /* LOGO */
+
+            .logo-container {
+
+                margin-top: 25px;
+
+                margin-bottom: 15px;
+            }
+
+
+            .logo-container img {
+
+                width: 170px;
+
+                height: 170px;
+            }
+
+
+            /* BUSINESS TITLE */
+
+            .business-title {
+
+                font-size: 34px;
+            }
+
+
+            /* DIVIDER */
+
+            .divider {
+
+                margin:
+                    35px 5% 25px;
+            }
+
+
+            /* MAIN CONTAINER */
+
+            .about-container {
+
+                width: 94%;
+
+                margin: 30px auto;
+
+                padding: 18px;
+
+                border-radius: 23px;
+            }
+
+
+            /* TITLE */
+
+            .about-title {
+
+                margin-bottom: 25px;
+            }
+
+
+            .about-title h1 {
+
+                font-size: 25px;
+            }
+
+
+            .about-title p {
+
+                font-size: 14px;
+            }
+
+
+            /* ABOUT CARDS */
+
+            .about-section {
+
+                padding:
+                    22px 18px;
+
+                margin-bottom: 15px;
+
+                border-radius: 17px;
+            }
+
+
+            .about-section h2 {
+
+                font-size: 21px;
+
+                margin-bottom: 12px;
+            }
+
+
+            .about-section p {
+
+                font-size: 13px;
+
+                line-height: 1.6;
+            }
+
+
+            /* GOALS */
+
+            .goals {
+
+                padding-left: 20px;
+
+                line-height: 1.6;
+            }
+
+
+            .goals li {
+
+                font-size: 13px;
+
+                margin-bottom: 5px;
+            }
+
+
+            /* TEAM */
+
+            .team-name {
+
+                font-size: 17px !important;
+            }
+
+
+            .team-role {
+
+                font-size: 13px !important;
+            }
+
+
+            /* FOOTER */
+
+            footer {
+
+                width: 94%;
+
+                padding:
+                    25px 15px;
+
+                border-radius: 23px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="product.html">
+            Products
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a href="about.html">
+            About Us
+        </a>
+
+    </nav>
+
+
+    <!-- =========================
+         LOGO
+    ========================= -->
+
+    <div class="logo-container">
+
+        <img
+            src="My business logo.png"
+            alt="Lilo(C) & Stitch Studio Logo">
+
+    </div>
+
+
+    <!-- =========================
+         BUSINESS TITLE
+    ========================= -->
+
+    <h1 class="business-title">
+
+        Lilo(C) &amp; Stitch <br>
+        Studio
+
+    </h1>
+
+
+    <!-- =========================
+         DIVIDER
+    ========================= -->
+
+    <hr class="divider">
+
+
+    <!-- =========================
+         ABOUT US
+    ========================= -->
+
+    <main class="about-container">
+
+
+        <div class="about-title">
+
+            <h1>
+                About Us
+            </h1>
+
+            <p>
+                Get to know Lilo(C) &amp; Stitch Studios
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             OUR BUSINESS
+        ========================= -->
+
+        <section class="about-section">
+
+            <h2>
+                Our Business
+            </h2>
+
+            <p>
+                Lilo(C) &amp; Stitch Studios is a handmade crochet business
+                created with creativity, passion, and care. The name of the
+                business has a special meaning. The owner, Ms. Alraluz L. Liloc,
+                is a fan of the movie Lilo &amp; Stitch. Since the owner's surname
+                is Liloc, the name "Lilo(C)" was created by separating the
+                letter C and placing it in parentheses. The capital letter
+                "C" represents Crochet, while "Stitch" represents the careful
+                stitches used to create each handmade product.
+            </p>
+
+            <br>
+
+            <p>
+                Each creation is made to show the beauty of handmade
+                craftsmanship and to bring warmth, creativity, and happiness
+                to our customers. Every piece is carefully made with
+                patience and attention to detail.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             OUR MISSION
+        ========================= -->
+
+        <section class="about-section">
+
+            <h2>
+                Our Mission
+            </h2>
+
+            <p>
+                Our mission is to create quality handmade crochet products
+                that bring comfort, creativity, and happiness to our customers.
+                We aim to make every product with patience, care, and attention
+                to detail while appreciating the value of handmade
+                craftsmanship.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             OUR VISION
+        ========================= -->
+
+        <section class="about-section">
+
+            <h2>
+                Our Vision
+            </h2>
+
+            <p>
+                Our vision is to become a trusted handmade crochet studio
+                known for creative designs, quality products, and meaningful
+                creations made with care. We hope to continue growing while
+                sharing the beauty and uniqueness of handmade crochet with
+                more people.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             OUR GOALS
+        ========================= -->
+
+        <section class="about-section">
+
+            <h2>
+                Our Goals
+            </h2>
+
+            <ul class="goals">
+
+                <li>
+                    Create unique and high-quality crochet products.
+                </li>
+
+                <li>
+                    Provide friendly and reliable service to customers.
+                </li>
+
+                <li>
+                    Continue improving our designs and craftsmanship.
+                </li>
+
+                <li>
+                    Share the beauty of handmade creations with others.
+                </li>
+
+                <li>
+                    Build a trusted and creative handmade brand.
+                </li>
+
+            </ul>
+
+        </section>
+
+      
+      <!-- =========================
+     OUR TEAM
+========================= -->
+
+<section class="about-section team">
+
+    <h2>
+        Our Team
+    </h2>
+
+
+    <!-- OWNER -->
+
+    <div class="team-member">
+
+        <h3 class="team-name">
+            Ms. Alraluz L. Liloc
+        </h3>
+
+        <p class="team-role">
+          —Owner &amp; Creator— <br>
+            The creative mind behind Lilo(C) &amp; Stitch Studios,
+            creating handmade crochet with passion and care. <br>
+        </p>
+
+    </div> <br>
+
+
+    <!-- CREATIVE TEAM -->
+
+    <div class="team-member">
+
+        <h3 class="team-name">
+            Lilo(C) &amp; Stitch Studio Team
+        </h3>
+
+        <p class="team-role">
+            —Ceative Team— <br>
+       The team behind every handmade creation, <br>
+          bringing creativity and care to every stitch. <br>
+        
+        
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="glass-footer">
+
+    <p class="copyright">
+        &copy; 2026 Lilo(C) &amp; Stitch Official
+    </p>
+
+    <h3 class="footer-title">
+        Follow Us:
+    </h3>
+
+    <div class="social-links">
+
+        <a href="https://www.facebook.com/"
+           target="_blank"
+           class="social-link">
+            <img src="images/Facebook.jpg" alt="Facebook">
+        </a>
+
+        <a href="mailto:lilocalraluz8@gmail.com"
+           class="social-link">
+            <img src="images/Gmail.jpg" alt="Gmail">
+        </a>
+
+        <a href="https://www.instagram.com/"
+           target="_blank"
+           class="social-link">
+            <img src="images/Instagram.jpg" alt="Instagram">
+        </a>
+
+        <a href="https://www.tiktok.com/"
+           target="_blank"
+           class="social-link">
+            <img src="images/Tiktok.jpg" alt="TikTok">
+        </a>
+
+    </div>
+
+</footer>
+
+</body>
+</html>

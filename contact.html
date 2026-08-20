@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | Lilo(C) & Stitch Studio</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        /* =========================
+           BODY
+        ========================= */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+            min-height: 100vh;
+
+            background:
+                radial-gradient(
+                    circle at 10% 15%,
+                    rgba(213, 154, 163, 0.45),
+                    transparent 28%
+                ),
+                radial-gradient(
+                    circle at 90% 25%,
+                    rgba(203, 213, 167, 0.55),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 50% 100%,
+                    rgba(239, 220, 224, 0.7),
+                    transparent 35%
+                ),
+                linear-gradient(
+                    135deg,
+                    #f7f4ed,
+                    #ffffff,
+                    #f1eee5
+                );
+
+            background-attachment: fixed;
+
+            color: #7b8064;
+
+            position: relative;
+            overflow-x: hidden;
+        }
+
+
+        /* =========================
+           BACKGROUND GLASS ORBS
+        ========================= */
+
+        body::before {
+            content: "";
+
+            position: fixed;
+
+            width: 250px;
+            height: 250px;
+
+            top: 120px;
+            left: -80px;
+
+            border-radius: 50%;
+
+            background: rgba(213, 154, 163, 0.18);
+
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+
+            box-shadow:
+                0 0 80px rgba(213, 154, 163, 0.2);
+
+            pointer-events: none;
+        }
+
+        body::after {
+            content: "";
+
+            position: fixed;
+
+            width: 300px;
+            height: 300px;
+
+            right: -100px;
+            bottom: 80px;
+
+            border-radius: 50%;
+
+            background: rgba(203, 213, 167, 0.2);
+
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+
+            box-shadow:
+                0 0 90px rgba(203, 213, 167, 0.25);
+
+            pointer-events: none;
+        }
+
+
+      
+      /* =========================  
+       GLASS NAVIGATION  
+    ========================= */  
+
+    nav {  
+
+        width: 92%;  
+
+        max-width: 1200px;  
+
+        margin: 20px auto;  
+
+        padding: 20px;  
+
+        text-align: center;  
+
+        background:  
+            rgba(255, 255, 255, 0.10);  
+
+        border:  
+            2px solid  
+            rgba(255, 255, 255, 0.65);  
+
+        border-top-color:  
+            rgba(255, 255, 255, 0.95);  
+
+        border-left-color:  
+            rgba(255, 255, 255, 0.85);  
+
+        border-radius: 30px;  
+
+        backdrop-filter:  
+            blur(8px)  
+            saturate(140%);  
+
+        -webkit-backdrop-filter:  
+            blur(8px)  
+            saturate(140%);  
+
+        box-shadow:  
+
+            0 15px 40px  
+            rgba(70, 80, 50, 0.18),  
+
+            inset 0 1px 3px  
+            rgba(255, 255, 255, 0.95);  
+
+        position: sticky;  
+
+        top: 15px;  
+
+        z-index: 100;  
+    }  
+
+
+    nav a {  
+
+        color: white;  
+
+        text-decoration: none;  
+
+        font-family:  
+            Arial,  
+            Helvetica,  
+            sans-serif;  
+
+        font-size: 20px;  
+
+        font-weight: bold;  
+
+        margin: 0 20px;  
+
+        text-shadow:  
+            0 2px 5px  
+            rgba(70, 70, 50, 0.3);  
+
+        transition: 0.3s;  
+    }  
+
+
+    nav a:hover {  
+
+        color: #d59aa3;  
+
+        text-shadow:  
+            0 0 12px  
+            rgba(213, 154, 163, 0.8);  
+    }
+
+
+     
+
+        /* NAVIGATION GLASS SHINE */
+
+        nav::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: -100%;
+
+            left: -60%;
+
+            width: 30%;
+
+            height: 300%;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.35),
+                    transparent
+                );
+
+            transform: rotate(25deg);
+
+            animation:
+                navGlassShine 7s linear infinite;
+
+            pointer-events: none;
+        }
+
+
+        @keyframes navGlassShine {
+
+            0% {
+                left: -60%;
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            50% {
+                left: 130%;
+                opacity: 0;
+            }
+
+            100% {
+                left: 130%;
+                opacity: 0;
+            }
+
+        }
+
+      
+
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        .contact-container {
+            width: 92%;
+            max-width: 1050px;
+
+            margin: 65px auto;
+
+            position: relative;
+            z-index: 2;
+        }
+
+
+        /* =========================
+           TITLE
+        ========================= */
+
+        .contact-title {
+            text-align: center;
+
+            margin-bottom: 45px;
+        }
+
+        .contact-title h1 {
+            font-family: "Cooper Black",
+                         "Trebuchet MS",
+                         Georgia,
+                         serif;
+
+            font-size: 48px;
+
+            color: #7c8658;
+
+            letter-spacing: 1px;
+
+            text-shadow:
+                0 3px 10px rgba(124, 134, 88, 0.15);
+
+            margin-bottom: 12px;
+        }
+
+        .contact-title p {
+            font-family: "Trebuchet MS",
+                         Arial,
+                         sans-serif;
+
+            font-size: 17px;
+
+            color: #9c9684;
+        }
+
+
+        /* =========================
+           CONTACT CONTENT
+        ========================= */
+
+        .contact-content {
+            display: flex;
+
+            gap: 30px;
+
+            justify-content: center;
+            align-items: stretch;
+        }
+
+
+        /* =========================
+           GLASS CARDS
+        ========================= */
+
+        .contact-info,
+        .contact-form {
+
+            width: 50%;
+
+            position: relative;
+
+            overflow: hidden;
+
+            padding: 38px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255, 255, 255, 0.45),
+                    rgba(255, 255, 255, 0.18)
+                );
+
+            border: 1.5px solid rgba(255, 255, 255, 0.8);
+
+            border-radius: 30px;
+
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+
+            box-shadow:
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.95),
+
+                inset 0 -1px 2px
+                rgba(255, 255, 255, 0.3),
+
+                0 20px 45px
+                rgba(100, 110, 75, 0.16);
+
+            transition: 0.4s ease;
+        }
+
+        .contact-info:hover,
+        .contact-form:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.95),
+
+                0 25px 55px
+                rgba(100, 110, 75, 0.2);
+        }
+
+
+        /* =========================
+           GLASS REFLECTION
+        ========================= */
+
+        .contact-info::before,
+        .contact-form::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: -50%;
+            left: -80%;
+
+            width: 60%;
+            height: 200%;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.4),
+                    transparent
+                );
+
+            transform: rotate(20deg);
+
+            animation:
+                glassShine 7s ease-in-out infinite;
+
+            pointer-events: none;
+        }
+
+        @keyframes glassShine {
+
+            0% {
+                left: -80%;
+            }
+
+            45%,
+            100% {
+                left: 150%;
+            }
+
+        }
+
+
+        /* =========================
+           CARD HEADINGS
+        ========================= */
+
+        .contact-info h2,
+        .contact-form h2 {
+
+            font-family: "Cooper Black",
+                         "Trebuchet MS",
+                         Georgia,
+                         serif;
+
+            color: #7c8658;
+
+            font-size: 28px;
+
+            margin-bottom: 28px;
+
+            letter-spacing: 0.5px;
+
+            position: relative;
+            z-index: 2;
+        }
+
+
+        /* =========================
+           CONTACT INFORMATION
+        ========================= */
+
+        .info-item {
+
+            margin-bottom: 23px;
+
+            position: relative;
+            z-index: 2;
+
+            padding: 14px 16px;
+
+            border-radius: 17px;
+
+            background: rgba(255, 255, 255, 0.18);
+
+            border: 1px solid rgba(255, 255, 255, 0.45);
+
+            transition: 0.3s ease;
+        }
+
+        .info-item:hover {
+
+            background: rgba(255, 255, 255, 0.3);
+
+            transform: translateX(4px);
+        }
+
+        .info-item strong {
+
+            display: block;
+
+            font-family: "Trebuchet MS",
+                         Arial,
+                         sans-serif;
+
+            color: #c38f98;
+
+            margin-bottom: 6px;
+
+            font-weight: bold;
+        }
+
+        .info-item p {
+
+            font-family: "Trebuchet MS",
+                         Arial,
+                         sans-serif;
+
+            font-size: 16px;
+
+            color: #777965;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           SOCIAL MEDIA
+        ========================= */
+
+        .social a {
+
+            color: #c38f98;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .social a:hover {
+
+            color: #7c8658;
+
+            text-decoration: underline;
+        }
+
+
+        /* =========================
+           FORM
+        ========================= */
+
+        .contact-form form {
+
+            position: relative;
+            z-index: 2;
+        }
+
+        label {
+
+            display: block;
+
+            font-family: "Trebuchet MS",
+                         Arial,
+                         sans-serif;
+
+            margin-bottom: 7px;
+
+            color: #c38f98;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           GLASS INPUTS
+        ========================= */
+
+        input,
+        textarea {
+
+            width: 100%;
+
+            padding: 14px 16px;
+
+            margin-bottom: 19px;
+
+            background:
+                rgba(255, 255, 255, 0.3);
+
+            border: 1px solid
+                rgba(255, 255, 255, 0.75);
+
+            border-radius: 15px;
+
+            font-family: "Trebuchet MS",
+                         Arial,
+                         sans-serif;
+
+            font-size: 15px;
+
+            color: #77765f;
+
+            outline: none;
+
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+
+            box-shadow:
+                inset 0 2px 5px
+                rgba(120, 120, 100, 0.04),
+
+                0 3px 10px
+                rgba(100, 110, 75, 0.04);
+
+            transition: 0.3s ease;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #aaa695;
+        }
+
+        input:focus,
+        textarea:focus {
+
+            background:
+                rgba(255, 255, 255, 0.5);
+
+            border-color: #d3a0a7;
+
+            box-shadow:
+                0 0 15px
+                rgba(211, 160, 167, 0.22);
+        }
+
+        textarea {
+
+            height: 125px;
+
+            resize: vertical;
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        button {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(211, 160, 167, 0.95),
+                    rgba(195, 143, 152, 0.9)
+                );
+
+            color: white;
+
+            border: 1px solid
+                rgba(255, 255, 255, 0.5);
+
+            padding: 14px 30px;
+
+            border-radius: 25px;
+
+            font-family: "Cooper Black",
+                         "Trebuchet MS",
+                         Georgia,
+                         serif;
+
+            font-size: 15px;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 8px 20px
+                rgba(195, 143, 152, 0.25),
+
+                inset 0 1px 2px
+                rgba(255, 255, 255, 0.5);
+
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+
+            transform: translateY(-3px);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #c38f98,
+                    #b9828a
+                );
+
+            box-shadow:
+                0 12px 25px
+                rgba(185, 130, 138, 0.3);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            width: 92%;
+            max-width: 1200px;
+
+            margin: 70px auto 20px;
+
+            padding: 20px;
+
+            text-align: center;
+
+            background:
+                rgba(203, 213, 167, 0.45);
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.7);
+
+            border-radius: 25px;
+
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+
+            box-shadow:
+                inset 0 1px 2px
+                rgba(255, 255, 255, 0.9),
+
+                0 12px 30px
+                rgba(100, 110, 75, 0.12);
+
+            color: white;
+        }
+
+        footer p {
+
+            font-family: "Trebuchet MS",
+                         Arial,
+                         sans-serif;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            nav {
+
+                width: 94%;
+
+                padding: 13px 10px;
+
+                gap: 4px;
+            }
+
+            nav a {
+
+                font-size: 14px;
+
+                padding: 7px 9px;
+            }
+
+            .contact-container {
+
+                width: 94%;
+
+                margin: 45px auto;
+            }
+
+            .contact-title h1 {
+
+                font-size: 35px;
+            }
+
+            .contact-title p {
+
+                font-size: 15px;
+            }
+
+            .contact-content {
+
+                flex-direction: column;
+
+                gap: 25px;
+            }
+
+            .contact-info,
+            .contact-form {
+
+                width: 100%;
+
+                padding: 27px;
+
+                border-radius: 25px;
+            }
+
+            .contact-info h2,
+            .contact-form h2 {
+
+                font-size: 23px;
+            }
+
+            footer {
+
+                width: 94%;
+
+                margin-top: 50px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="products.html">Products</a>
+
+        <a href="gallery.html">Gallery</a>
+        
+        <a href="contact.html">Contact</a>
+
+        <a href="about.html">About Us</a>
+
+    </nav>
+
+
+    <!-- =========================
+         CONTACT US
+    ========================= -->
+
+    <main class="contact-container">
+
+        <div class="contact-title">
+
+            <h1>Contact Us</h1>
+
+            <p>We'd love to hear from you!</p>
+
+        </div>
+
+
+        <div class="contact-content">
+
+
+            <!-- CONTACT INFORMATION -->
+
+            <section class="contact-info">
+
+                <h2>Get in Touch</h2>
+
+
+                <div class="info-item">
+
+                    <strong>📍 Business Address</strong>
+
+                    <p>
+                        25 Craft Lane, Stitchville
+                    </p>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <strong>✉ Email Address</strong>
+
+                    <p>
+                        LiloC&amp;stitch@gmail.com
+                    </p>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <strong>☎ Contact Number</strong>
+
+                    <p>
+                        0917-555-0134
+                    </p>
+
+                </div>
+
+
+                           </section>
+
+
+            <!-- CONTACT FORM -->
+
+            <section class="contact-form">
+
+                <h2>Send Us a Message</h2>
+
+
+                <form>
+
+                    <label for="name">
+                     Full   Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                    >
+
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                    >
+
+                    <label for="email">
+                        Contact Number 
+                    </label>
+
+                    <input
+                        type="Contact number"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your contact number"
+                    >
+
+ <div style="margin-top: 20px;">
+
+    <label style="display: block; margin-bottom: 8px;">
+        Product/Services Selection:
+    </label>
+
+    <div style="
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 20px !important;
+        width: 100% !important;
+    ">
+
+        <label style="
+            display: inline-flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            width: auto !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        ">
+            <input
+                type="radio"
+                name="contact_method"
+                value="email"
+                required
+                style="
+                    display: inline-block !important;
+                    width: auto !important;
+                    margin: 0 5px 0 0 !important;
+                "
+            >
+            keychains
+        </label>
+
+        <label style="
+            display: inline-flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            width: auto !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        ">
+            <input
+                type="radio"
+                name="contact_method"
+                value="phone"
+                style="
+                    display: inline-block !important;
+                    width: auto !important;
+                    margin: 0 5px 0 0 !important;
+                "
+            >
+            Summer Essentials
+        </label>
+
+ <label style="
+            display: inline-flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            width: auto !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        ">
+            <input
+                type="radio"
+                name="contact_method"
+                value="email"
+                required
+                style="
+                    display: inline-block !important;
+                    width: auto !important;
+                    margin: 0 5px 0 0 !important;
+                "
+            >
+            keychains
+        </label>
+
+    </div>
+
+</div>    <br> <br>
+
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Write your message..."
+                    ></textarea>
+
+
+        <div style="margin-top: 20px;">
+
+    <label style="display: block; margin-bottom: 8px;">
+        Preferred Contact Method:
+    </label>
+
+    <div style="
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 20px !important;
+        width: 100% !important;
+    ">
+
+        <label style="
+            display: inline-flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            width: auto !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        ">
+            <input
+                type="radio"
+                name="contact_method"
+                value="email"
+                required
+                style="
+                    display: inline-block !important;
+                    width: auto !important;
+                    margin: 0 5px 0 0 !important;
+                "
+            >
+            Email
+        </label>
+
+        <label style="
+            display: inline-flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            width: auto !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        ">
+            <input
+                type="radio"
+                name="contact_method"
+                value="phone"
+                style="
+                    display: inline-block !important;
+                    width: auto !important;
+                    margin: 0 5px 0 0 !important;
+                "
+            >
+            Phone Number
+        </label>
+
+    </div>
+
+</div>    <br> <br>
+
+
+
+            <button type="submit">
+                        Submit
+                    </button>
+<button type="reset">Reset</button>
+ </form>
+
+            </section>
+
+        </div>
+
+    </main>
+
+<!-- ==========================================
+     COMPLETE CUSTOM FOOTER (HTML & CSS COMBINED)
+     ========================================== -->
+<style>
+    /* 
+       COLOR CONFIGURATION 
+       You can change these hex codes to adjust the footer theme anytime 
+    */
+    :root {
+        --footer-bg: #f5edf0;       /* Soft pink/gray tinted background */
+        --text-muted: #8e6c76;      /* Muted burgundy for copyright text */
+        --text-heading: #c58d9c;   /* Vibrant berry-pink for "Follow Us:" */
+        --icon-size: 46px;          /* Width and height of your circle icons */
+    }
+
+    /* Outer layout box spanning the bottom of your webpage */
+    .glass-footer {
+        background-color: var(--footer-bg);
+        padding: 45px 20px;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-top: 50px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Muted copyright styling */
+    .glass-footer .copyright {
+        color: var(--text-muted);
+        font-size: 14px;
+        font-weight: 500;
+        margin: 0;
+        letter-spacing: 0.5px;
+    }
+
+    /* Large "Follow Us:" title styling */
+    .glass-footer .footer-title {
+        color: var(--text-heading);
+        font-size: 24px;
+        font-weight: 700;
+        margin: 4px 0 14px 0;
+    }
+
+    /* Container keeping social anchors in a horizontal row */
+    .glass-footer .social-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px; /* Gap distance separating each circle */
+    }
+
+    /* Forces your image assets into crisp, perfect circles */
+    .glass-footer .social-link img {
+        width: var(--icon-size) !important;
+        height: var(--icon-size) !important;
+        object-fit: cover;            /* Prevents logos from stretching awkwardly */
+        border-radius: 50% !important;/* Cuts square images into circles */
+        border: 2px solid #ffffff;    /* Crisp white outer border ring */
+        box-shadow: 0 4px 10px rgba(109, 66, 78, 0.15); /* Warm tinted drop shadow */
+        transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    /* Gentle spring animation when tracking mouse hover */
+    .glass-footer .social-link img:hover {
+        transform: scale(1.12) translateY(-2px);
+    }
+</style>
+
+<!-- Copy and paste this structural markup right below your main layout content -->
+<footer class="glass-footer">
+
+    <p class="copyright">
+        &copy; 2026 Lilo(C) &amp; Stitch Official
+    </p>
+
+    <h3 class="footer-title">
+        Follow Us:
+    </h3>
+
+    <div class="social-links">
+
+        <a href="https://facebook.com"
+           target="_blank"
+           class="social-link">
+            <img src="images/Facebook.jpg" alt="Facebook">
+        </a>
+
+        <a href="mailto:lilocalraluz8@gmail.com"
+           class="social-link">
+            <img src="images/Gmail.jpg" alt="Gmail">
+        </a>
+
+        <a href="https://instagram.com"
+           target="_blank"
+           class="social-link">
+            <img src="images/Instagram.jpg" alt="Instagram">
+        </a>
+
+        <a href="https://tiktok.com"
+           target="_blank"
+           class="social-link">
+            <img src="images/Tiktok.jpg" alt="TikTok">
+        </a>
+
+    </div>
+
+</footer>
+
+
+
+

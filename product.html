@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Products | Lilo(C) & Stitch Studio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        /* =========================
+           BODY
+        ========================= */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+            color: #77765f;
+
+            background:
+                radial-gradient(
+                    circle at 10% 10%,
+                    rgba(225, 180, 188, 0.8),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 90% 20%,
+                    rgba(203, 213, 167, 0.85),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 20% 90%,
+                    rgba(239, 220, 224, 0.8),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 85% 85%,
+                    rgba(210, 220, 175, 0.7),
+                    transparent 30%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #eee9df,
+                    #ffffff,
+                    #e9edda
+                );
+
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+
+
+        /* =========================
+           GLASS NAVIGATION
+        ========================= */
+
+        nav {
+            width: 92%;
+            max-width: 1200px;
+
+            margin: 20px auto;
+            padding: 20px;
+
+            text-align: center;
+
+            background: rgba(255, 255, 255, 0.08);
+
+            border: 2px solid rgba(255, 255, 255, 0.65);
+
+            border-top-color:
+                rgba(255, 255, 255, 0.95);
+
+            border-left-color:
+                rgba(255, 255, 255, 0.85);
+
+            border-radius: 30px;
+
+            backdrop-filter:
+                blur(8px)
+                saturate(140%);
+
+            -webkit-backdrop-filter:
+                blur(8px)
+                saturate(140%);
+
+            box-shadow:
+                0 15px 40px
+                rgba(70, 80, 50, 0.18),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.95);
+
+            position: sticky;
+            top: 15px;
+            
+            z-index: 100;
+        }
+
+
+        nav a {
+            color: white;
+
+            text-decoration: none;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 20px;
+
+            font-weight: bold;
+
+            margin: 0 20px;
+
+            text-shadow:
+                0 2px 5px
+                rgba(70, 70, 50, 0.3);
+
+            transition: 0.3s;
+        }
+
+
+        nav a:hover {
+            color: #d59aa3;
+
+            text-shadow:
+                0 0 12px
+                rgba(213, 154, 163, 0.8);
+        }
+  /* =========================
+           LOGO GLASS AREA
+        ========================= */
+
+        .logo-container {
+
+            width: 90%;
+
+            max-width: 600px;
+
+            margin: 45px auto 25px;
+
+            padding: 30px;
+
+            text-align: center;
+
+            background:
+                rgba(255, 255, 255, 0.10);
+
+            border: 2px solid
+                rgba(255, 255, 255, 0.65);
+
+            border-top-color:
+                rgba(255, 255, 255, 0.95);
+
+            border-left-color:
+                rgba(255, 255, 255, 0.85);
+
+            border-radius: 30px;
+
+            backdrop-filter:
+                blur(10px)
+                saturate(140%);
+
+            -webkit-backdrop-filter:
+                blur(10px)
+                saturate(140%);
+
+            box-shadow:
+
+                0 20px 45px
+                rgba(70, 80, 50, 0.15),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.95);
+        }
+
+
+        .logo-container img {
+
+            width: 220px;
+
+            height: 220px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border:
+                5px solid
+                rgba(255, 255, 255, 0.9);
+
+            box-shadow:
+
+                0 8px 25px
+                rgba(70, 80, 50, 0.2),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.9);
+
+            background:
+                rgba(255, 248, 242, 0.5);
+
+            padding: 8px;
+        }
+
+
+        /* =========================
+           BUSINESS TITLE
+        ========================= */
+
+        .business-title {
+
+            width: 90%;
+
+            max-width: 800px;
+
+            margin: 25px auto;
+
+            padding: 25px;
+
+            text-align: center;
+
+            background:
+                rgba(255, 255, 255, 0.10);
+
+            border:
+                2px solid
+                rgba(255, 255, 255, 0.6);
+
+            border-radius: 28px;
+
+            backdrop-filter:
+                blur(8px);
+
+            -webkit-backdrop-filter:
+                blur(8px);
+
+            box-shadow:
+
+                0 15px 35px
+                rgba(70, 80, 50, 0.12),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.9);
+        }
+
+
+        .business-title h1 {
+
+            color: #a9a67a;
+
+            text-align: center;
+
+            font-size: 45px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-weight: bold;
+
+            line-height: 1.1;
+
+            margin: 0;
+        }
+
+
+
+        /* =========================
+           LOGO
+        ========================= */
+
+        .logo-container {
+            text-align: center;
+
+            margin-top: 35px;
+            margin-bottom: 20px;
+        }
+
+
+        .logo-container img {
+            width: 220px;
+            height: 220px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 5px solid
+                rgba(255, 255, 255, 0.9);
+
+            background:
+                rgba(255, 255, 255, 0.15);
+
+            padding: 8px;
+
+            box-shadow:
+                0 15px 35px
+                rgba(70, 80, 50, 0.18),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.9);
+        }
+
+
+        /* =========================
+           BUSINESS TITLE
+        ========================= */
+
+        .business-title {
+            color: #7f895a;
+
+            text-align: center;
+
+            font-size: 45px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-weight: bold;
+
+            line-height: 1.1;
+
+            margin-top: 10px;
+            margin-bottom: 5px;
+
+            text-shadow:
+                0 3px 12px
+                rgba(126, 137, 90, 0.2);
+        }
+
+
+        /* =========================
+           DIVIDER
+        ========================= */
+
+        .divider {
+            border: none;
+
+            border-top:
+                2px solid
+                rgba(169, 166, 122, 0.6);
+
+            margin: 40px 5% 25px;
+        }
+
+
+        /* =========================
+           INTRODUCTION
+        ========================= */
+
+        .intro {
+            text-align: center;
+
+            color: #77765f;
+
+            font-family:
+                "Trebuchet MS",
+                Arial,
+                sans-serif;
+
+            font-size: 17px;
+
+            line-height: 1.8;
+
+            margin: 0 auto 35px;
+
+            max-width: 800px;
+
+            padding: 25px;
+
+            background:
+                rgba(255, 255, 255, 0.08);
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.55);
+
+            border-radius: 25px;
+
+            backdrop-filter: blur(8px);
+
+            -webkit-backdrop-filter: blur(8px);
+
+            box-shadow:
+                0 10px 30px
+                rgba(70, 80, 50, 0.10),
+
+                inset 0 1px 2px
+                rgba(255, 255, 255, 0.8);
+        }
+
+
+        /* =========================
+           PRODUCTS CONTAINER
+        ========================= */
+
+        .products-container {
+            width: 94%;
+            max-width: 1200px;
+
+            margin: 40px auto;
+        }
+
+
+        /* =========================
+           PRODUCT GLASS BOX
+        ========================= */
+
+        .product-section {
+
+            margin-bottom: 35px;
+
+            padding: 25px;
+
+            background:
+                rgba(255, 255, 255, 0.12);
+
+            border:
+                2px solid
+                rgba(255, 255, 255, 0.65);
+
+            border-top-color:
+                rgba(255, 255, 255, 0.95);
+
+            border-left-color:
+                rgba(255, 255, 255, 0.85);
+
+            border-radius: 28px;
+
+            backdrop-filter:
+                blur(10px)
+                saturate(140%);
+
+            -webkit-backdrop-filter:
+                blur(10px)
+                saturate(140%);
+
+            box-shadow:
+
+                0 20px 45px
+                rgba(70, 80, 50, 0.16),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.9);
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        /* =========================
+           GLASS SHINE
+        ========================= */
+
+        .product-section::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: -100%;
+            left: -60%;
+
+            width: 25%;
+            height: 300%;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.35),
+                    transparent
+                );
+
+            transform: rotate(25deg);
+
+            animation:
+                productShine 8s linear infinite;
+
+            pointer-events: none;
+        }
+
+
+        @keyframes productShine {
+
+            0% {
+                left: -60%;
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            50% {
+                left: 130%;
+                opacity: 0;
+            }
+
+            100% {
+                left: 130%;
+                opacity: 0;
+            }
+
+        }
+
+
+        /* =========================
+           CATEGORY TITLES
+        ========================= */
+
+        .category-title {
+
+            color: #c9939b;
+
+            font-family:
+                "Cooper Black",
+                "Trebuchet MS",
+                Georgia,
+                serif;
+
+            font-size: 25px;
+
+            text-align: center;
+
+            margin-bottom: 20px;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        /* =========================
+           PRODUCT TABLE
+        ========================= */
+
+        table {
+
+            width: 100%;
+
+            border-collapse: separate;
+
+            border-spacing: 0;
+
+            overflow: hidden;
+
+            border-radius: 18px;
+
+            background:
+                rgba(255, 255, 255, 0.10);
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        th {
+
+            color: #c9939b;
+
+            font-family:
+                "Trebuchet MS",
+                Arial,
+                sans-serif;
+
+            font-size: 16px;
+
+            padding: 15px;
+
+            background:
+                rgba(255, 255, 255, 0.18);
+
+            border-bottom:
+                1px solid
+                rgba(255, 255, 255, 0.7);
+        }
+
+
+        td {
+
+            color: #77765f;
+
+            font-family:
+                "Trebuchet MS",
+                Arial,
+                sans-serif;
+
+            font-size: 15px;
+
+            line-height: 1.6;
+
+            padding: 15px;
+
+            text-align: center;
+
+            background:
+                rgba(255, 255, 255, 0.07);
+
+            border-bottom:
+                1px solid
+                rgba(255, 255, 255, 0.45);
+        }
+
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+
+        /* =========================
+           PRODUCT IMAGES
+        ========================= */
+
+        .product-image {
+
+            width: 100px;
+            height: 120px;
+
+            object-fit: cover;
+
+            border-radius: 18px;
+
+            border:
+                3px solid
+                rgba(255, 255, 255, 0.8);
+
+            box-shadow:
+                0 8px 18px
+                rgba(70, 80, 50, 0.15);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        .product-image:hover {
+
+            transform:
+                translateY(-5px)
+                scale(1.03);
+
+            box-shadow:
+                0 12px 25px
+                rgba(70, 80, 50, 0.2);
+        }
+
+
+        /* =========================
+           ORDER BUTTON
+        ========================= */
+
+        .order-button {
+
+            display: inline-block;
+
+            background:
+                rgba(211, 160, 167, 0.85);
+
+            color: white;
+
+            padding: 9px 17px;
+
+            border-radius: 20px;
+
+            text-decoration: none;
+
+            font-family:
+                "Trebuchet MS",
+                Arial,
+                sans-serif;
+
+            font-weight: bold;
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.65);
+
+            box-shadow:
+                0 5px 15px
+                rgba(185, 130, 138, 0.2),
+
+                inset 0 1px 2px
+                rgba(255, 255, 255, 0.5);
+
+            transition: 0.3s;
+        }
+
+
+        .order-button:hover {
+
+            background:
+                rgba(185, 130, 138, 0.95);
+
+            transform:
+                translateY(-2px);
+
+            box-shadow:
+                0 8px 18px
+                rgba(185, 130, 138, 0.3);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            width: 92%;
+            max-width: 1200px;
+
+            margin: 60px auto 20px;
+
+            padding: 30px;
+
+            background:
+                rgba(255, 255, 255, 0.10);
+
+            border:
+                2px solid
+                rgba(255, 255, 255, 0.65);
+
+            border-top-color:
+                rgba(255, 255, 255, 0.95);
+
+            border-left-color:
+                rgba(255, 255, 255, 0.85);
+
+            border-radius: 28px;
+
+            backdrop-filter: blur(10px);
+
+            -webkit-backdrop-filter: blur(10px);
+
+            box-shadow:
+                0 15px 40px
+                rgba(70, 80, 50, 0.16),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.9);
+
+            text-align: center;
+        }
+
+
+        .footer-title {
+
+            color: #c9939b;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            margin-bottom: 20px;
+        }
+
+
+        .social-links {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .social-link {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 55px;
+            height: 55px;
+
+            padding: 7px;
+
+            background:
+                rgba(255, 255, 255, 0.25);
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.75);
+
+            border-radius: 50%;
+
+            backdrop-filter: blur(5px);
+
+            -webkit-backdrop-filter: blur(5px);
+
+            box-shadow:
+                0 5px 15px
+                rgba(70, 80, 50, 0.12);
+
+            transition: 0.3s;
+        }
+
+
+        .social-link:hover {
+
+            transform:
+                translateY(-4px);
+
+            background:
+                rgba(255, 255, 255, 0.45);
+        }
+
+
+        .social-link img {
+
+            width: 40px;
+            height: 40px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+        }
+
+
+        .copyright {
+
+            color: #a29b88;
+
+            font-size: 14px;
+
+            margin-top: 25px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            nav {
+
+                width: 94%;
+
+                padding: 15px 8px;
+
+                border-radius: 25px;
+
+                backdrop-filter:
+                    blur(6px)
+                    saturate(140%);
+
+                -webkit-backdrop-filter:
+                    blur(6px)
+                    saturate(140%);
+            }
+
+
+            nav a {
+
+                font-size: 14px;
+
+                margin: 0 6px;
+            }
+
+
+            .logo-container img {
+
+                width: 170px;
+                height: 170px;
+            }
+
+
+            .business-title {
+
+                font-size: 34px;
+            }
+
+
+            .intro {
+
+                width: 90%;
+
+                font-size: 15px;
+
+                padding: 20px;
+            }
+
+
+            .products-container {
+
+                width: 94%;
+            }
+
+
+            .product-section {
+
+                padding: 15px;
+
+                border-radius: 22px;
+
+                overflow-x: auto;
+            }
+
+
+            .category-title {
+
+                font-size: 21px;
+            }
+
+
+            table {
+
+                min-width: 650px;
+            }
+
+
+            th,
+            td {
+
+                font-size: 14px;
+
+                padding: 10px;
+            }
+
+
+            .product-image {
+
+                width: 80px;
+                height: 100px;
+            }
+
+
+            footer {
+
+                width: 94%;
+
+                padding: 25px 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="product.html">Products</a>
+
+        <a href="gallery.html">Gallery</a>
+
+        <a href="contact.html">Contact</a>
+
+        <a href="about.html">About Us</a>
+
+          </nav>
+
+
+    <!-- =========================
+         LOGO
+    ========================= -->
+
+    <div class="logo-container">
+
+        <img
+            src="My business logo.png"
+            alt="Lilo(C) & Stitch Studio Logo">
+
+    </div>
+
+
+    <!-- =========================
+         BUSINESS TITLE
+    ========================= -->
+
+    <h1 class="business-title">
+
+        Lilo(C) &amp; Stitch <br>
+        Studio
+
+    </h1>
+
+
+    <hr class="divider">
+
+
+    <!-- =========================
+         INTRODUCTION
+    ========================= -->
+
+    <p class="intro">
+
+        Explore our handmade collection from
+        Lilo(C) &amp; Stitch Studio,
+        featuring unique crochet pieces made with
+        care, creativity, and style.
+
+    </p>
+
+
+    <!-- =========================
+         PRODUCTS
+    ========================= -->
+
+    <main class="products-container">
+
+
+        <!-- STITCH & WEAR -->
+
+        <section class="product-section">
+
+            <h2 class="category-title">
+                STITCH &amp; WEAR APPAREL
+            </h2>
+
+
+            <table>
+
+                <tr>
+
+                    <th>PRODUCT</th>
+                    <th>PRICES</th>
+                    <th>DESCRIPTION</th>
+                    <th>ORDER</th>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <img
+                            src="images/Cloud Knit Cardigan.jpg"
+                            alt="Cloud Knit Cardigan"
+                            class="product-image">
+                    </td>
+
+                    <td>
+                        Php 349.00
+                    </td>
+
+                    <td>
+                        A Cloud Knit Cardigan for cozy days,
+                        effortless style, and all day comfort.
+                    </td>
+
+                    <td>
+                        <a
+                            href="contact.html"
+                            class="order-button">
+                            ORDER NOW
+                        </a>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <img
+                            src="images/Willow Flow.jpg"
+                            alt="Willow Flow Pants"
+                            class="product-image">
+                    </td>
+
+                    <td>
+                        Php 399.00
+                    </td>
+
+                    <td>
+                        A Willow Flow Pants for effortless
+                        comfort, style, and everyday wear.
+                    </td>
+
+                    <td>
+                        <a
+                            href="contact.html"
+                            class="order-button">
+                            ORDER NOW
+                        </a>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <img
+                            src="images/Serene Stitch Top.jpg"
+                            alt="Serene Stitch Top"
+                            class="product-image">
+                    </td>
+
+                    <td>
+                        Php 250.00
+                    </td>
+
+                    <td>
+                        A Serene Stitch Top, a breathable
+                        handmade crochet top that brings
+                        comfort, elegance, and a timeless look.
+                    </td>
+
+                    <td>
+                        <a
+                            href="contact.html"
+                            class="order-button">
+                            ORDER NOW
+                        </a>
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </section>
+
+
+        <!-- DAILY LOOPS -->
+
+        <section class="product-section">
+
+            <h2 class="category-title">
+                A DAILY LOOPS ESSENTIALS
+            </h2>
+
+
+            <table>
+
+                <tr>
+
+                    <th>PRODUCT</th>
+                    <th>PRICES</th>
+                    <th>DESCRIPTION</th>
+                    <th>ORDER</th>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <img
+                            src="images/A Lil' Loops.jpg"
+                            alt="A Lil' Loops"
+                                  class="product-image">
+                    </td>
+
+                    <td>
+                        Php 99.00
+                    </td>
+
+                    <td>
+                        A Lil' Loops for adding a touch to
+                        your everyday essentials. Crafted with care,
+                        it's perfect for bags, keys, or as a thoughtful gift.
+                    </td>
+
+                    <td>
+                        <a
+                            href="contact.html"
+                            class="order-button">
+                            ORDER NOW
+                        </a>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <img
+                            src="images/Loop & Lock.jpg"
+                            alt="Loop & Lock Wallet"
+                            class="product-image">
+                    </td>
+
+                    <td>
+                        Php 139.00
+                    </td>
+
+                    <td>
+                        A Loop &amp; Lock Wallet for carrying
+                        your cards and cash with a cozy charm.
+                    </td>
+
+                    <td>
+                        <a
+                            href="contact.html"
+                            class="order-button">
+                            ORDER NOW
+                        </a>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <img
+                            src="images/Sip & Stitch.jpg"
+                            alt="Sip & Stitch"
+                            class="product-image">
+                    </td>
+
+                    <td>
+                        Php 149.00
+                    </td>
+
+                    <td>
+                        A Sip &amp; Stitch for carrying your
+                        tumbler with ease and style.
+                    </td>
+
+                    <td>
+                        <a
+                            href="contact.html"
+                            class="order-button">
+                            ORDER NOW
+                        </a>
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </section>
+
+
+        <!-- =========================
+             SUNLIT SERIES
+        ========================= -->
+
+        <section class="product-section">
+
+            <h2 class="category-title">
+                SUNLIT SERIES ESSENTIALS
+            </h2>
+
+
+            <table>
+
+                <tr>
+
+                    <th>PRODUCT</th>
+                    <th>PRICES</th>
+                    <th>DESCRIPTION</th>
+                    <th>ORDER</th>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <img
+                            src="images/Sunbeam Carryall.jpg"
+                            alt="Sunbeam Carryall"
+                            class="product-image">
+                    </td>
+
+                    <td>
+                        Php 259.00
+                    </td>
+
+                    <td>
+                        A Sunbeam Carryall for packing all
+                        your seaside must-haves.
+                    </td>
+
+                    <td>
+                        <a
+                            href="contact.html"
+                            class="order-button">
+                            ORDER NOW
+                        </a>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <img
+                            src="images/Loop & Step.jpg"
+                            alt="Loop & Step"
+                            class="product-image">
+                    </td>
+
+                    <td>
+                        Php 179.00
+                    </td>
+
+                    <td>
+                        A Loop &amp; Step for customizing your
+                        slippers, adding comfort and personality
+                        to your beach footwear.
+                    </td>
+
+                    <td>
+                        <a
+                            href="contact.html"
+                            class="order-button">
+                            ORDER NOW
+                        </a>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <img
+                            src="images/Seabreeze Tankini.jpg"
+                            alt="Seabreeze Tankini"
+                            class="product-image">
+                    </td>
+
+                    <td>
+                        Php 289.00
+                    </td>
+
+                    <td>
+                        A Seabreeze Tankini for soaking up
+                        the sun in handcrafted elegance.
+                    </td>
+
+                    <td>
+                        <a
+                            href="contact.html"
+                            class="order-button">
+                            ORDER NOW
+                        </a>
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </section>
+
+    </main>
+
+
+    
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="glass-footer">
+
+    <p class="copyright">
+        &copy; 2026 Lilo(C) &amp; Stitch Official
+    </p> <br>
+
+    <h3 class="footer-title">
+        Follow Us:
+    </h3>
+
+    <div class="social-links">
+
+        <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            class="social-link">
+
+            <img
+                src="images/Facebook.jpg"
+                alt="Facebook">
+
+        </a>
+
+
+        <a
+            href="mailto:lilocalraluz8@gmail.com"
+            class="social-link">
+
+            <img
+                src="images/Gmail.jpg"
+                alt="Gmail">
+
+        </a>
+
+
+        <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            class="social-link">
+
+            <img
+                src="images/Instagram.jpg"
+                alt="Instagram">
+
+        </a>
+
+
+        <a
+            href="https://www.tiktok.com/"
+            target="_blank"
+            class="social-link">
+
+            <img
+                src="images/Tiktok.jpg"
+                alt="TikTok">
+
+        </a>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
+   

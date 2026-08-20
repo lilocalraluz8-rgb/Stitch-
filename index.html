@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Business Webpage</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+            min-height: 100vh;
+
+            color: #6f7650;
+
+            background:
+                radial-gradient(
+                    circle at 10% 10%,
+                    rgba(225, 180, 188, 0.8),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 90% 20%,
+                    rgba(203, 213, 167, 0.85),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 20% 90%,
+                    rgba(239, 220, 224, 0.8),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 85% 85%,
+                    rgba(210, 220, 175, 0.7),
+                    transparent 30%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #eee9df,
+                    #ffffff,
+                    #e9edda
+                );
+
+            background-attachment: fixed;
+
+            overflow-x: hidden;
+        }
+
+      /* =========================  
+       GLASS NAVIGATION  
+    ========================= */  
+
+    nav {  
+
+        width: 92%;  
+
+        max-width: 1200px;  
+
+        margin: 20px auto;  
+
+        padding: 20px;  
+
+        text-align: center;  
+
+        background:  
+            rgba(255, 255, 255, 0.10);  
+
+        border:  
+            2px solid  
+            rgba(255, 255, 255, 0.65);  
+
+        border-top-color:  
+            rgba(255, 255, 255, 0.95);  
+
+        border-left-color:  
+            rgba(255, 255, 255, 0.85);  
+
+        border-radius: 30px;  
+
+        backdrop-filter:  
+            blur(8px)  
+            saturate(140%);  
+
+        -webkit-backdrop-filter:  
+            blur(8px)  
+            saturate(140%);  
+
+        box-shadow:  
+
+            0 15px 40px  
+            rgba(70, 80, 50, 0.18),  
+
+            inset 0 1px 3px  
+            rgba(255, 255, 255, 0.95);  
+
+        position: sticky;  
+
+        top: 15px;  
+
+        z-index: 100;  
+    }  
+
+
+    nav a {  
+
+        color: white;  
+
+        text-decoration: none;  
+
+        font-family:  
+            Arial,  
+            Helvetica,  
+            sans-serif;  
+
+        font-size: 20px;  
+
+        font-weight: bold;  
+
+        margin: 0 20px;  
+
+        text-shadow:  
+            0 2px 5px  
+            rgba(70, 70, 50, 0.3);  
+
+        transition: 0.3s;  
+    }  
+
+
+    nav a:hover {  
+
+        color: #d59aa3;  
+
+        text-shadow:  
+            0 0 12px  
+            rgba(213, 154, 163, 0.8);  
+    }
+
+
+     
+
+        /* NAVIGATION GLASS SHINE */
+
+        nav::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: -100%;
+
+            left: -60%;
+
+            width: 30%;
+
+            height: 300%;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.35),
+                    transparent
+                );
+
+            transform: rotate(25deg);
+
+            animation:
+                navGlassShine 7s linear infinite;
+
+            pointer-events: none;
+        }
+
+
+        @keyframes navGlassShine {
+
+            0% {
+                left: -60%;
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            50% {
+                left: 130%;
+                opacity: 0;
+            }
+
+            100% {
+                left: 130%;
+                opacity: 0;
+            }
+
+        }
+
+      
+
+        /* =========================
+           LOGO GLASS AREA
+        ========================= */
+
+        .logo-container {
+
+            width: 90%;
+
+            max-width: 600px;
+
+            margin: 45px auto 25px;
+
+            padding: 30px;
+
+            text-align: center;
+
+            background:
+                rgba(255, 255, 255, 0.10);
+
+            border: 2px solid
+                rgba(255, 255, 255, 0.65);
+
+            border-top-color:
+                rgba(255, 255, 255, 0.95);
+
+            border-left-color:
+                rgba(255, 255, 255, 0.85);
+
+            border-radius: 30px;
+
+            backdrop-filter:
+                blur(10px)
+                saturate(140%);
+
+            -webkit-backdrop-filter:
+                blur(10px)
+                saturate(140%);
+
+            box-shadow:
+
+                0 20px 45px
+                rgba(70, 80, 50, 0.15),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.95);
+        }
+
+
+        .logo-container img {
+
+            width: 220px;
+
+            height: 220px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border:
+                5px solid
+                rgba(255, 255, 255, 0.9);
+
+            box-shadow:
+
+                0 8px 25px
+                rgba(70, 80, 50, 0.2),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.9);
+
+            background:
+                rgba(255, 248, 242, 0.5);
+
+            padding: 8px;
+        }
+
+
+        /* =========================
+           BUSINESS TITLE
+        ========================= */
+
+        .business-title {
+
+            width: 90%;
+
+            max-width: 800px;
+
+            margin: 25px auto;
+
+            padding: 25px;
+
+            text-align: center;
+
+            background:
+                rgba(255, 255, 255, 0.10);
+
+            border:
+                2px solid
+                rgba(255, 255, 255, 0.6);
+
+            border-radius: 28px;
+
+            backdrop-filter:
+                blur(8px);
+
+            -webkit-backdrop-filter:
+                blur(8px);
+
+            box-shadow:
+
+                0 15px 35px
+                rgba(70, 80, 50, 0.12),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.9);
+        }
+
+
+        .business-title h1 {
+
+            color: #7f895a;
+
+            text-align: center;
+
+            font-size: 45px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-weight: bold;
+
+            line-height: 1.1;
+
+            margin: 0;
+        }
+
+
+        /* =========================
+           WELCOME GLASS SECTION
+        ========================= */
+
+        .welcome-section {
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 40px auto;
+
+            padding: 40px 30px;
+
+            text-align: center;
+
+            background:
+                rgba(255, 255, 255, 0.12);
+
+            border:
+                2px solid
+                rgba(255, 255, 255, 0.65);
+
+            border-top-color:
+                rgba(255, 255, 255, 0.95);
+
+            border-left-color:
+                rgba(255, 255, 255, 0.85);
+
+            border-right-color:
+                rgba(217, 166, 173, 0.45);
+
+            border-bottom-color:
+                rgba(217, 166, 173, 0.55);
+
+            border-radius: 30px;
+
+            backdrop-filter:
+                blur(10px)
+                saturate(140%);
+
+            -webkit-backdrop-filter:
+                blur(10px)
+                saturate(140%);
+
+            box-shadow:
+
+                0 20px 45px
+                rgba(70, 80, 50, 0.16),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.95);
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .welcome-section h1 {
+
+            font-family:
+                "Cooper Black",
+                "Trebuchet MS",
+                Georgia,
+                serif;
+
+            color: #7c8658;
+
+            font-size: 30px;
+
+            margin-bottom: 20px;
+
+            text-shadow:
+                0 2px 8px
+                rgba(124, 134, 88, 0.2);
+        }
+
+
+        .welcome-section p {
+
+            color: #6b5b4b;
+
+            font-family:
+                "Trebuchet MS",
+                Arial,
+                sans-serif;
+
+            font-size: 16px;
+
+            line-height: 1.7;
+
+            max-width: 700px;
+
+            margin: auto;
+        }
+
+
+        /* =========================
+           GLASS SHINE
+        ========================= */
+
+        .welcome-section::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: -100%;
+
+            left: -60%;
+
+            width: 30%;
+
+            height: 300%;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.35),
+                    transparent
+                );
+
+            transform: rotate(25deg);
+
+            animation:
+                glassReflection 7s linear infinite;
+
+            pointer-events: none;
+        }
+
+
+        @keyframes glassReflection {
+
+            0% {
+                left: -60%;
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            50% {
+                left: 130%;
+                opacity: 0;
+            }
+
+            100% {
+                left: 130%;
+                opacity: 0;
+            }
+        }
+
+
+        /* =========================
+           SLIDESHOW GLASS
+        ========================= */
+
+        .slideshow-container {
+
+            position: relative;
+
+            width: 90%;
+
+            max-width: 1000px;
+
+            margin: 35px auto 15px;
+
+            padding: 12px;
+
+            background:
+                rgba(255, 255, 255, 0.12);
+
+            border:
+                2px solid
+                rgba(255, 255, 255, 0.7);
+
+            border-top-color:
+                rgba(255, 255, 255, 0.95);
+
+            border-radius: 28px;
+
+            backdrop-filter:
+                blur(8px);
+
+            -webkit-backdrop-filter:
+                blur(8px);
+
+            box-shadow:
+
+                0 20px 45px
+                rgba(70, 80, 50, 0.18),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.9);
+
+            overflow: hidden;
+        }
+
+
+        .slides {
+
+            display: none;
+
+            width: 100%;
+        }
+
+
+        .slides img {
+
+            width: 100%;
+
+            display: block;
+
+            border-radius: 20px;
+
+            border:
+                2px solid
+                rgba(255, 255, 255, 0.55);
+        }
+
+
+        /* =========================
+           PREVIOUS / NEXT
+        ========================= */
+
+        .prev,
+        .next {
+
+            cursor: pointer;
+
+            position: absolute;
+
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            padding: 12px 17px;
+
+            color: white;
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            text-decoration: none;
+
+            background:
+                rgba(255, 255, 255, 0.18);
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.7);
+
+            backdrop-filter:
+                blur(8px);
+
+            -webkit-backdrop-filter:
+                blur(8px);
+
+            border-radius: 50%;
+
+            transition: 0.3s;
+
+            text-shadow:
+                0 2px 5px
+                rgba(70, 70, 50, 0.3);
+        }
+
+
+        .prev {
+            left: 20px;
+        }
+
+
+        .next {
+            right: 20px;
+        }
+
+
+        .prev:hover,
+        .next:hover {
+
+            background:
+                rgba(213, 154, 163, 0.55);
+
+            box-shadow:
+                0 0 15px
+                rgba(213, 154, 163, 0.35);
+        }
+
+
+        /* =========================
+           DOTS
+        ========================= */
+
+        .dots {
+
+            text-align: center;
+
+            margin: 18px 0 30px;
+        }
+
+
+        .dot {
+
+            display: inline-block;
+
+            width: 9px;
+
+            height: 9px;
+
+            margin: 0 5px;
+
+            background:
+                rgba(255, 255, 255, 0.45);
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.8);
+
+            border-radius: 50%;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+
+            box-shadow:
+                0 2px 8px
+                rgba(70, 80, 50, 0.15);
+        }
+
+
+        .dot:hover,
+        .dot.active {
+
+            background: #d3a0a7;
+
+            box-shadow:
+                0 0 10px
+                rgba(211, 160, 167, 0.5);
+        }
+
+
+        /* =========================
+           SHOP NOW GLASS FOOTER
+        ========================= */
+
+        footer {
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 50px auto 25px;
+
+            padding: 30px;
+
+            text-align: center;
+
+            background:
+                rgba(255, 255, 255, 0.10);
+
+            border:
+                2px solid
+                rgba(255, 255, 255, 0.65);
+
+            border-top-color:
+                rgba(255, 255, 255, 0.95);
+
+            border-radius: 30px;
+
+            backdrop-filter:
+                blur(10px);
+
+            -webkit-backdrop-filter:
+                blur(10px);
+
+            box-shadow:
+
+                0 15px 40px
+                rgba(70, 80, 50, 0.16),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.95);
+        }
+
+
+        .shop-now {
+
+            display: inline-block;
+
+            padding: 15px 35px;
+
+            color: white;
+
+            text-decoration: none;
+
+            background:
+                rgba(211, 160, 167, 0.85);
+
+            border:
+                2px solid
+                rgba(255, 255, 255, 0.65);
+
+            border-radius: 30px;
+
+            font-family:
+                "Cooper Black",
+                "Trebuchet MS",
+                Georgia,
+                serif;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            box-shadow:
+
+                0 8px 20px
+                rgba(185, 130, 138, 0.25),
+
+                inset 0 1px 3px
+                rgba(255, 255, 255, 0.65);
+
+            animation:
+                softPulse 2.8s ease-in-out infinite;
+
+            transition: 0.3s;
+        }
+
+
+        .shop-now:hover {
+
+            background:
+                rgba(185, 130, 138, 0.95);
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 10px 25px
+                rgba(185, 130, 138, 0.35);
+        }
+
+
+        @keyframes softPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.025);
+            }
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            nav {
+
+                width: 94%;
+
+                padding: 15px 8px;
+
+                border-radius: 25px;
+            }
+
+
+            nav a {
+
+                font-size: 14px;
+
+                margin: 0 6px;
+            }
+
+
+            .logo-container {
+
+                width: 90%;
+
+                padding: 22px;
+
+                margin-top: 35px;
+            }
+
+
+            .logo-container img {
+
+                width: 180px;
+
+                height: 180px;
+            }
+
+
+            .business-title {
+
+                width: 90%;
+
+                padding: 20px;
+            }
+
+
+            .business-title h1 {
+
+                font-size: 32px;
+            }
+
+
+            .welcome-section {
+
+                width: 92%;
+
+                padding: 30px 20px;
+
+                border-radius: 25px;
+            }
+
+
+            .welcome-section h1 {
+
+                font-size: 23px;
+            }
+
+
+            .welcome-section p {
+
+                font-size: 15px;
+            }
+
+
+            .slideshow-container {
+
+                width: 95%;
+
+                padding: 8px;
+
+                border-radius: 22px;
+            }
+
+
+            .slides img {
+
+                border-radius: 16px;
+            }
+
+
+            .prev,
+            .next {
+
+                padding: 8px 12px;
+
+                font-size: 17px;
+            }
+
+
+            .prev {
+                left: 12px;
+            }
+
+
+            .next {
+                right: 12px;
+            }
+
+
+            footer {
+
+                width: 92%;
+
+                padding: 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav>
+
+        <a href="My Business Website index.html">
+            Home
+        </a>
+
+        <a href="product.html">
+            Products
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+         <a href="about.html">
+            About Us
+        </a>
+
+
+    </nav>
+
+
+    <!-- =========================
+         LOGO
+    ========================= -->
+
+    <div class="logo-container">
+
+        <img
+            src="My business logo.png"
+            alt="Lilo(C) & Stitch Studio Logo">
+
+    </div>
+
+
+    <!-- =========================
+         BUSINESS TITLE
+    ========================= -->
+
+    <div class="business-title">
+
+        <h1>
+            Lilo(C) &amp; Stitch
+            <br>
+            Studio
+        </h1>
+
+    </div>
+
+
+    <!-- =========================
+         WELCOME SECTION
+    ========================= -->
+
+    <section class="welcome-section">
+
+        <h1>
+            Welcome to Lilo(C) &amp; Stitch Studio!
+        </h1>
+
+        <p>
+            Where every stitch tells a story. Discover handmade crochet
+            creations crafted with love, care, and creativity. From stylish
+            accessories to cozy essentials, each piece is made to bring
+            warmth and charm to your everyday life.
+        </p>
+
+
+        <!-- =========================
+             SLIDESHOW
+        ========================= -->
+
+        <div class="slideshow-container">
+
+
+            <div class="slides fade">
+
+                <img
+                    src="Pictures/bannerone.jpg"
+                    alt="Banner one">
+
+            </div>
+
+
+            <div class="slides fade">
+
+                <img
+                    src="Pictures/bannertwo.jpg"
+                    alt="Banner two">
+
+            </div>
+
+
+            <div class="slides fade">
+
+                <img
+                    src="Pictures/bannerthree.jpg"
+                    alt="Banner three">
+
+            </div>
+
+
+            <!-- Previous -->
+
+            <a
+                class="prev"
+                onclick="plusSlides(-1)">
+                &#10094;
+            </a>
+
+
+            <!-- Next -->
+
+            <a
+                class="next"
+                onclick="plusSlides(1)">
+                &#10095;
+            </a>
+
+        </div>
+
+
+        <!-- =========================
+             DOTS
+        ========================= -->
+
+        <div class="dots">
+
+            <span
+                class="dot"
+                onclick="currentSlide(1)">
+            </span>
+
+            <span
+                class="dot"
+                onclick="currentSlide(2)">
+            </span>
+
+            <span
+                class="dot"
+                onclick="currentSlide(3)">
+            </span>
+
+        </div>
+
+    </section>
+
+
+   <script src="script.js"></script>
+
+<footer>
+    <a href="product.html" class="shop-now">SHOP NOW!</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,717 @@
+/* =========================
+   GENERAL PAGE
+   ========================= */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+nav {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 35px
+
+    width: 100%
+    margin: 0
+    padding: 12px 0:
+
+    border-top: 2px solid #a5a681;
+    border-bottom: 2px solid #a5a681;
+    box-sizing: border-box;
+    background-color: #b6b792;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 0 10px;
+    font-weight: bold;
+    padding: 5px 10px
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #ffbdbd
+}
+
+
+/* =========================
+
+   HEADINGS
+   ========================= */
+
+h1 {
+    color:#a9a67a;
+    text-align: center;
+    font-size: 32px;
+    margin: 20px auto;
+}
+
+h2 {
+    color:#a9a67a;
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.6;
+    max-width: 650px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+
+/* =========================
+   SLIDESHOW
+   ========================= */
+
+.slideshow-container {
+    width: 400px;
+    height: 300px;
+    position: relative;
+    margin: 20px auto;
+}
+
+.slides {
+    display: none;
+    width: 100%;
+    height: 300px;
+}
+
+.slides img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+}
+
+
+/* =========================
+   FADE ANIMATION
+   ========================= */
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================
+   PREVIOUS / NEXT BUTTONS
+   ========================= */
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 12px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s;
+    background-color: rgba(80, 70, 60, 0.35);
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+
+
+/* =========================
+   SLIDESHOW DOTS
+   ========================= */
+
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #fff7f2;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot:hover {
+    background-color:#a9a67a;
+}
+
+.dot.active {
+    background-color:#a9a67a;
+}
+
+
+/* =========================
+   HORIZONTAL LINE
+   ========================= */
+
+hr {
+    border: none;
+    border-top: 2px solid #6BAED6;
+    margin-top: 40px;
+}
+
+
+/* =========================
+   logo
+   ========================= */
+
+.logo {
+    width: 70px;
+    height: 50px;
+    object-fit: contain;
+    display: block;
+}
+
+
+
+/* =========================
+   SHOP NOW - ATTENTION ANIMATION
+   ========================= */
+
+.shop-now {
+    display: inline-block;
+    padding: 15px 45px;
+    background-color: #b0ad7d;
+    color: #4d3b32;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s ease;
+
+    /* Automatic movement */
+    animation: shopBounce 1.5s ease-in-out infinite;
+}
+
+/* Bounce + slight zoom */
+@keyframes shopBounce {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-8px) scale(1.06);
+    }
+}
+
+/* When touched/hovered */
+.shop-now:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 18px rgba(80, 70, 60, 0.3);
+}
+
+ 
+/* =========================
+   BANNER SLIDESHOW
+   ========================= */
+
+.slideshow-container {
+    max-width: 900px;
+    position: relative;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.slides {
+    display: none;
+}
+
+.slides img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+/* Fade animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Previous and Next buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 12px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Dots */
+.dots {
+    text-align: center;
+    margin-top: 15px;
+}
+.dot {
+    height: 9px;
+    width: 9px;
+    margin: 0 5px;
+    background-color: #b0ad7d;
+    border-radius: 50%;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.dot:hover {
+    transform: scale(1.2);
+}
+
+.active {
+    transform: scale(1.15);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+<style>
+          table{
+    color:#6f6a58;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+th{
+    background:#f7c7d3;
+    color:#7a5a4d;
+    font-size:18px;
+    font-weight:bold;
+}
+
+td{
+    color:#5f5a4b;
+    font-size:17px;
+    line-height:1.5;
+    padding:15px;
+}
+
+.price{
+    color:#b46b7b;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.description{
+    color:#68614d;
+    font-size:17px;
+}
+    </style>
+</head>
+
+<style>
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 15px;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+.gallery-item {
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 50%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.gallery-item figcaption {
+    font-size: 14px;
+    margin-top: 8px;
+    color: #5f4a42;
+}
+</style>
+ 
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8f3;
+    color: #5c514c;
+}
+
+
+/* =========================
+   GALLERY SECTION
+========================= */
+
+.gallery-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+
+/* Main title */
+
+.gallery-section > h1 {
+    text-align: center;
+    font-size: 42px;
+    color: #b6b792;
+    margin-bottom: 10px;
+}
+
+
+/* Introduction */
+
+.gallery-intro {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 35px;
+    color: #6d625c;
+}
+
+
+/* =========================
+   HORIZONTAL GALLERY
+========================= */
+
+.gallery-container {
+    display: grid;
+
+    /* Makes the gallery horizontal */
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    width: 100%;
+}
+
+
+/* =========================
+   GALLERY CARD
+========================= */
+
+.gallery-card {
+    background-color: #fffdfb;
+
+    border: 2px solid #e8caca;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    padding: 12px;
+
+    margin: 5px;
+
+    box-shadow: 0 5px 15px rgba(120, 90, 80, 0.15);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+
+/* Hover animation */
+
+.gallery-card:hover {
+    transform: translateY(-8px) scale(1.02);
+
+    box-shadow: 0 12px 25px rgba(120, 90, 80, 0.25);
+
+    border-color: #c9c99e;
+}
+
+
+/* =========================
+   IMAGES
+========================= */
+
+.gallery-card img {
+    width: 100%;
+
+    height: 280px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 14px;
+
+    border: 1px solid #eadada;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* Image zoom */
+
+.gallery-card:hover img {
+    transform: scale(0.4);
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.gallery-info {
+    text-align: center;
+
+    padding: 18px 8px 10px;
+}
+
+
+.gallery-info h2 {
+    font-size: 22px;
+
+    color: #5e514a;
+
+    margin-bottom: 8px;
+}
+
+
+.gallery-info p {
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    color: #756963;
+}
+
+
+/* =========================
+   STORY TITLE
+========================= */
+
+.story-title {
+    text-align: center;
+
+    color: #b6b792;
+
+    font-size: 40px;
+
+    margin-top: 60px;
+
+    padding-top: 30px;
+
+    border-top: 3px solid #efc6c6;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-section > h1 {
+        font-size: 34px;
+    }
+
+    .story-title {
+        font-size: 32px;
+    }
+}
+
+
+/* =========================
+   PHONE
+========================= */
+
+@media (max-width: 600px) {
+
+    .gallery-section {
+        padding: 20px 15px;
+        margin: 20px auto;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 15px;
+    }
+
+    .gallery-card {
+        padding: 8px;
+        margin: 0;
+        border-radius: 15px;
+    }
+
+    .gallery-card img {
+        height: 190px;
+        border-radius: 10px;
+    }
+
+    .gallery-info {
+        padding: 12px 4px 8px;
+    }
+
+    .gallery-info h2 {
+        font-size: 17px;
+    }
+
+    .gallery-info p {
+        font-size: 13px;
+    }
+
+    .gallery-section > h1 {
+        font-size: 28px;
+    }
+
+    .gallery-intro {
+        font-size: 15px;
+    }
+
+    .story-title {
+        font-size: 27px;
+        margin-top: 40px;
+    }
+}
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.video-container iframe {
+    width: 560px;
+    height: 315px;
+    border: 5px solid #ffbdbd;
+    border-radius: 15px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.gallery-card {
+    width: 100%;
+    background-color: #fffdfb;
+    border: 2px solid #e8caca;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-card img {
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: 65%;
+    object-fit: cover;
+    border-radius: 14px;
+    display: block;
+}
+
+.gallery-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+}
+
+* 1. Restrain the parent links area if it is expanding */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Spaces them out cleanly horizontally */
+}
+
+/* 2. FORCE the images to shrink to icon size */
+.social-link img {
+    width: 35px !important;   /* Hard caps the width */
+    height: 35px !important;  /* Hard caps the height */
+    object-fit: contain;      /* Keeps the aspect ratio of the logos perfect */
+    border-radius: 8px;       /* Adds neat slightly rounded corners to match your buttons */
+}
+
+
+
+
+
